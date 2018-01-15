@@ -1,0 +1,71 @@
+
+<!ENTITY name "PULSARv2">
+<!-- 
+    ~#DTD for Parsing Unstructured Language into Sentiment-Aspect ~Representations
+    ~v2
+    ~MPC
+    ~1/14/2018 
+    ~note: based on tutorial here, https://github.com/keighrim/mae-annotation/wiki/defining-dtd
+-->
+
+<!-- #Phrasing can hold Judgement, EventOrFact; Other should only be used in very rare cases-->
+<!ELEMENT PhraseType ( #PCDATA ) >
+<!ATTLIST PhraseType id ID prefix="PT" #REQUIRED >
+<!ATTLIST PhraseType Content (Judgement | EventOrFact | Other) #REQUIRED >
+
+<!-- #If there is a judgement, what is the text that expresses the aspect of human rights being judged (eg civil rights) and is the reference a direct expression of the named aspect or an indirect reference such as "this right"-->
+<!ELEMENT AspectExpression ( #PCDATA ) >
+<!ATTLIST AspectExpression id ID prefix="AE" #IMPLIED >
+<!ATTLIST AspectExpression Type (Direct | Indirect) #IMPLIED >
+
+<!-- #If there is a judgement, what text expresses the judgement offered on the aspect of human rights and is the reference a judgement by the author or is it from some other party and just reported by the author-->
+<!ELEMENT JudgementExpression ( #PCDATA ) >
+<!ATTLIST JudgementExpression id ID prefix="JE" #IMPLIED >
+<!ATTLIST JudgementExpression Type (Direct | Indirect) #IMPLIED >
+
+<!-- #Expression that Signals Both Judgement and Aspect at the Same Time (eg. killing, assualted, etc) -->
+<!ELEMENT JointAspectJudgementExpression ( #PCDATA ) >
+<!ATTLIST JointAspectJudgementExpression id ID prefix="JAJ" #IMPLIED >
+
+<!-- #Text that identifies the source of judgement, if not author
+this is NOT the perpetrator of the violation, but the source of the info-->
+<!ELEMENT SourceOfJudgement ( #PCDATA ) >
+<!ATTLIST SourceOfJudgement id ID prefix="SOJ" #IMPLIED >
+
+<!-- #Text that identifies the actor/perpetrator that caused a judgement, if given, this is not the source of the information, but on the ground actor being reported about-->
+<!ELEMENT Perpetrator ( #PCDATA ) >
+<!ATTLIST Perpetrator id ID prefix="PER" #IMPLIED >
+
+<!- #Text that identifies the target/victim of the event that caused a judgement, if given, this is not the source of the information, or the perpetrator of an action but on the ground actor being targeted and reported about-->
+<!ELEMENT Victim ( #PCDATA ) >
+<!ATTLIST Victim id ID prefix="VIC" #IMPLIED >
+
+
+<!-- #Link from JudgementExpression to the AspectExpression that it governs-->
+<!ELEMENT FromJudgementToAspectExpression EMPTY >
+<!ATTLIST FromJudgementToAspectExpression id ID prefix="LJA" #IMPLIED >
+
+
+<!-- #Is source listed, if not the author, then link from source to judgement
+this is not the perpetrator of violations, but the source of the information-->
+<!ELEMENT FromSourceOfJudgementToJudgementExpression EMPTY >
+<!ATTLIST FromSourceOfJudgementToJudgementExpression id ID prefix="LJJ" #IMPLIED >
+
+
+<!-- #If Perpetrator listed then link from Perpetrator to the judgement of what they did
+this is not the perpetrator of violations, but the source of the information-->
+<!ELEMENT FromPerpetratorToJudgementExpression EMPTY >
+<!ATTLIST FromPerpetratorToJudgementExpression id ID prefix="LPJ" #IMPLIED >
+
+
+<!-- #If victim listed then link from the judgement to the target of the action that caused the judgement -->
+<!ELEMENT FromJudgementExpressionToVictim EMPTY >
+<!ATTLIST FromJudgementExpressionToVictim id ID prefix="LJV" #IMPLIED >
+
+
+
+
+
+
+
+
