@@ -50,9 +50,9 @@ These are each types of relations are *links*.
 #### Some Specific cases
 
 - Judgements are often verb phrases and aspects noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence: 
-```
+    ```
     Security forces committed politically motivated killings.
-```
+    ```
 has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the                  perpetrator.   It then has a __FromPerpetratorToJudgement__ link (`Security forces`,`committed`) and a                 __FromJudgementToAspect__ link (`committed`,`politically motivated killings`). If a specific person or proper noun is         named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a      victim or a perpetrator. 
 
 - If is important to keep judgement words, like `unlawful`, `arbitrary`, `intense` and `severe` in the judgement expressions. 
