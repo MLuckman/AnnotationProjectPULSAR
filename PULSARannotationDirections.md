@@ -3,7 +3,7 @@
 
 #Installation an
 
-0. Download `mae-2.2.4-fatjar.jar`, from [https://github.com/keighrim/mae-annotation/releases](here). 
+0. Download `mae-2.2.4-fatjar.jar`, from [https://github.com/keighrim/mae-annotation/releases](here) 
 
 1. Open the java interface at the terminal:
 `java -har mae-2.2.4-fatjar.jar`
@@ -86,6 +86,14 @@ These are each types of relations are *links*.
 - There are old event in the text. References to past years. Should we have an *old* tag.
 
 - Some sentences have extensive details about an aspect, in particular. Should allo this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity?
+
+- Add negation entity and link FromNegationToJudgement
+
+- Add link from judgement to OldEventOrFact
+
+- Add link from an Indirect Aspect to an EventFact to resolve coreferene
+
+- Add `148 children were kidnapped` as example for JointJudgementAspectExpression, ignore `were` in coding for efficiency
 
 
 
