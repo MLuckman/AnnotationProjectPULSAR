@@ -6,7 +6,7 @@
 0. Download `mae-2.2.4-fatjar.jar`, from https://github.com/keighrim/mae-annotation/releases
 
 1. Open the java interface at the terminal:
-`java -har mae-2.2.4-fatjar.jar`
+`java -jar mae-2.2.4-fatjar.jar`
 
 2. Open the document-type definition file by going to file menu, then select "New Task Definition", and find `PULSARv2.dtd`.
 
