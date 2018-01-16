@@ -60,7 +60,11 @@ Security forces committed politically motivated killings.
 
 - Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: `Abuses included killing`, `killing` is both the aspect (within physcial integrity rights) and the judgement, they did it, although that is implied. There is a special extent tag for this: JointJudgementAspectExpression.
 
-- Sentences with `of` can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example: `Civilian authorities did not maintain effective control of the security forces.` One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a common phrase and security forces are groups that are more likely to be perpetrators. The `civilian government` is the perpetrator.
+- Sentences with `of` can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example: 
+```
+Civilian authorities did not maintain effective control of the security forces.
+```
+One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a common phrase and security forces are groups that are more likely to be perpetrators. The `civilian government` is the perpetrator.
 
 - Related to the previous point, keep the phrase `rule of law` together. It is a multiword expression.
 
