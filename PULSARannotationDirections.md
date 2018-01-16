@@ -51,18 +51,21 @@ These are each types of relations are *links*.
 
 - Judgements are often verb phrases and aspects noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence: 
 ```
-Security forces committed politically motivated killings.
+    Security forces committed politically motivated killings.
 ```
-
-  has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the perpetrator.   It then has a __FromPerpetratorToJudgement__ link (`Security forces`,`committed`) and a __FromJudgementToAspect__ link         (`committed`,`politically motivated killings`). If a specific person or proper noun is named, that is not an abstract aspect    of human rights that is being violated or protected, but instead is usually a victim or a perpetrator. 
+has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the                  perpetrator.   It then has a __FromPerpetratorToJudgement__ link (`Security forces`,`committed`) and a                 __FromJudgementToAspect__ link (`committed`,`politically motivated killings`). If a specific person or proper noun is         named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a      victim or a perpetrator. 
 
 - If is important to keep judgement words, like `unlawful`, `arbitrary`, `intense` and `severe` in the judgement expressions. 
 
 - Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: `Abuses included killing`, `killing` is both the aspect (within physcial integrity rights) and the judgement, they did it, although that is implied. There is a special extent tag for this: JointJudgementAspectExpression.
 
-- Sentences with `of` can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example: `Civilian authorities did not maintain effective control of the security forces.` One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a common phrase and security forces are groups that are more likely to be perpetrators. The `civilian government` is the perpetrator.
+- Sentences with `of` can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example: 
+```
+Civilian authorities did not maintain effective control of the security forces.
+```
+One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a common phrase and security forces are groups that are more likely to be perpetrators. The `civilian government` is the perpetrator.
 
-- Related to the previous point, keep the phrase `rule of law` together. It is a multiword expression.
+- Related to the previous point, keep the phrase `rule of law`, `freedom of speech`, `freedom of expression`, etc. together. It is a multiword expression.
 
 - When there are two prepositions, as in `obstruction of the work of nongovernmental organizations (NGOs)`, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so `the work of nongovernmental organizations (NGOs)` is the aspect and the judgement is `obstruction of`.
 
