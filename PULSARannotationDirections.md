@@ -1,7 +1,7 @@
 # Direction to Annotate using PULSAR-rules
 
 
-#Installation an
+## Installation an
 
 0. Download `mae-2.2.4-fatjar.jar`, from [https://github.com/keighrim/mae-annotation/releases](here). 
 
@@ -14,12 +14,12 @@
 
 
 
-#Goals
+## Goals
 
 The goals are to mark up human rights reports so that we can identify what aspects of human rights are being judged over time, as well as who are the perpetrators, victims and sources of information.
 
 
-#Tagging Chucks of Contiguous Text as Entities
+### Tagging Chucks of Contiguous Text as Entities
 
 For our purposes text can serve five different relevant purposes. It can signal:
 
@@ -32,7 +32,7 @@ For our purposes text can serve five different relevant purposes. It can signal:
 Each of these five purposes is considered an *entity*. 
 
 
-#Tagging Links Between Entities
+### Tagging Links Between Entities
 
 In addition, we want to identify connections between these chunks of text. Specifically, we want to be able to identify links:
 
@@ -44,7 +44,7 @@ In addition, we want to identify connections between these chunks of text. Speci
 These are each types of relations are *links*.
 
 
-#Examples
+### Examples
 
 
 #Some Specific cases
