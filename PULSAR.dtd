@@ -1,5 +1,5 @@
 
-<!ENTITY name "PULSARv2">
+<!ENTITY name "PULSARv2.1">
 <!-- 
     ~#DTD for Parsing Unstructured Language into Sentiment-Aspect ~Representations
     ~v2
@@ -11,7 +11,7 @@
 <!-- #Phrasing can hold Judgement, EventOrFact; Other should only be used in very rare cases-->
 <!ELEMENT PhraseType ( #PCDATA ) >
 <!ATTLIST PhraseType id ID prefix="PT" #REQUIRED >
-<!ATTLIST PhraseType Content (Judgement | EventOrFact | Other) #REQUIRED >
+<!ATTLIST PhraseType Content (Judgement | CurrentEventOrFact | OldEventOrFact  | Ambiguous | Other) #REQUIRED >
 
 <!-- #If there is a judgement, what is the text that expresses the aspect of human rights being judged (eg civil rights) and is the reference a direct expression of the named aspect or an indirect reference such as "this right"-->
 <!ELEMENT AspectExpression ( #PCDATA ) >
