@@ -66,7 +66,7 @@ Civilian authorities did not maintain effective control of the security forces.
 ```
 One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a common phrase and security forces are groups that are more likely to be perpetrators. The `civilian government` is the perpetrator.
 
-- Related to the previous point, keep the phrase `rule of law` together. It is a multiword expression.
+- Related to the previous point, keep the phrase `rule of law`, `freedom of speech`, `freedom of expression`, etc. together. It is a multiword expression.
 
 - When there are two prepositions, as in `obstruction of the work of nongovernmental organizations (NGOs)`, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so `the work of nongovernmental organizations (NGOs)` is the aspect and the judgement is `obstruction of`.
 
