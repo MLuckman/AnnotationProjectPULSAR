@@ -47,7 +47,7 @@ These are each types of relations are *links*.
 ### Examples
 
 
-#Some Specific cases
+#### Some Specific cases
 
 - Judgements are often verb phrases and aspects noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence: `Security forces committed politically motivated killings.`, has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the perpetrator. It then has a FromPerpetratorToJudgement link (`Security forces`,`committed`) and a FromJudgementToAspect link (`committed`,`politically motivated killings`). If a specific person or proper noun is named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a victim or a perpetrator. 
 
@@ -81,7 +81,7 @@ These are each types of relations are *links*.
 - You can use discontinuous extents when necessary. For example, when there is one judgement that is split across the beginning and the end of a sentence.
 
 
-#Questions for future
+#### Questions for future
 
 - There are old event in the text. References to past years. Should we have an *old* tag.
 
