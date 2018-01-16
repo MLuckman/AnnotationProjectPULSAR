@@ -1,17 +1,17 @@
 
-<!ENTITY name "PULSARv2.1">
+<!ENTITY name "PULSARv2.2">
 <!-- 
     ~#DTD for Parsing Unstructured Language into Sentiment-Aspect ~Representations
     ~v2
     ~MPC
-    ~1/14/2018 
+    ~1/16/2018 
     ~note: based on tutorial here, https://github.com/keighrim/mae-annotation/wiki/defining-dtd
 -->
 
-<!-- #Phrasing can hold Judgement, EventOrFact; Other should only be used in very rare cases-->
+<!-- #Phrasing can hold Judgement, but also Current or Old EventOrFact; Other should only be used in very rare cases, use Ambiguous when you do not know what type of phrase this is, or text is garbled-->
 <!ELEMENT PhraseType ( #PCDATA ) >
 <!ATTLIST PhraseType id ID prefix="PT" #REQUIRED >
-<!ATTLIST PhraseType Content (Judgement | CurrentEventOrFact | OldEventOrFact  | Ambiguous | Other) #REQUIRED >
+<!ATTLIST PhraseType Content (CurrentEventOrFact | OldEventOrFact  | Ambiguous | Other) #REQUIRED >
 
 <!-- #If there is a judgement, what is the text that expresses the aspect of human rights being judged (eg civil rights) and is the reference a direct expression of the named aspect or an indirect reference such as "this right"-->
 <!ELEMENT AspectExpression ( #PCDATA ) >
@@ -40,6 +40,14 @@ this is NOT the perpetrator of the violation, but the source of the info-->
 <!ELEMENT Victim ( #PCDATA ) >
 <!ATTLIST Victim id ID prefix="VIC" #IMPLIED >
 
+<!- #Text that identifies a time, could be a range of time, a year, or a date, this could be refering to the judgement, an event or when the source of information became available-->
+<!ELEMENT Time ( #PCDATA ) >
+<!ATTLIST Time id ID prefix="TIM" #IMPLIED >
+
+<!- #Text that identifies a location, could be a range of places, area, city, direction (eg east), or anothe country, this could be refering to the place where the judged violation/protection happened, where an event happened or where the source of information came about-->
+<!ELEMENT Location ( #PCDATA ) >
+<!ATTLIST Location id ID prefix="LOC" #IMPLIED >
+
 
 <!-- #Link from JudgementExpression to the AspectExpression that it governs-->
 <!ELEMENT FromJudgementToAspectExpression EMPTY >
@@ -62,10 +70,16 @@ this is not the perpetrator of violations, but the source of the information-->
 <!ELEMENT FromJudgementExpressionToVictim EMPTY >
 <!ATTLIST FromJudgementExpressionToVictim id ID prefix="LJV" #IMPLIED >
 
+<!-- #Link from JudgementExpression to a PhraseType == OldEventOrFact that it governs-->
+<!ELEMENT FromJudgementToOldEventOrFact EMPTY >
+<!ATTLIST FromJudgementToOldEventOrFact id ID prefix="LJOld" #IMPLIED >
 
+<!-- #Link from Time to Entity that it represents, should be either a source of information, judgement, or non-judgement phrase type-->
+<!ELEMENT FromTimeToEntity EMPTY >
+<!ATTLIST FromTimeToEntity id ID prefix="LTE" #IMPLIED >
 
-
-
-
+<!-- #Link from Location to Entity that it represents-->
+<!ELEMENT FromLocationToEntity EMPTY >
+<!ATTLIST FromLocationToEntity id ID prefix="LLE" #IMPLIED >
 
 

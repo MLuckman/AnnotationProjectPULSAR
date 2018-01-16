@@ -1,12 +1,12 @@
-#Direction to Annotate using PULSAR-rules
+# Direction to Annotate using PULSAR-rules
 
 
-#Installation an
+## Installation
 
-0. Download `mae-2.2.4-fatjar.jar`, from [https://github.com/keighrim/mae-annotation/releases](here) 
+0. Download `mae-2.2.4-fatjar.jar`, from https://github.com/keighrim/mae-annotation/releases
 
 1. Open the java interface at the terminal:
-`java -har mae-2.2.4-fatjar.jar`
+`java -jar mae-2.2.4-fatjar.jar`
 
 2. Open the document-type definition file by going to file menu, then select "New Task Definition", and find `PULSARv2.dtd`.
 
@@ -14,12 +14,12 @@
 
 
 
-#Goals
+## Goals
 
 The goals are to mark up human rights reports so that we can identify what aspects of human rights are being judged over time, as well as who are the perpetrators, victims and sources of information.
 
 
-#Tagging Chucks of Contiguous Text as Entities
+### Tagging Chucks of Contiguous Text as Entities
 
 For our purposes text can serve five different relevant purposes. It can signal:
 
@@ -32,7 +32,7 @@ For our purposes text can serve five different relevant purposes. It can signal:
 Each of these five purposes is considered an *entity*. 
 
 
-#Tagging Links Between Entities
+### Tagging Links Between Entities
 
 In addition, we want to identify connections between these chunks of text. Specifically, we want to be able to identify links:
 
@@ -44,10 +44,10 @@ In addition, we want to identify connections between these chunks of text. Speci
 These are each types of relations are *links*.
 
 
-#Examples
+### Examples
 
 
-#Some Specific cases
+#### Some Specific cases
 
 - Judgements are often verb phrases and aspects noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence: `Security forces committed politically motivated killings.`, has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the perpetrator. It then has a FromPerpetratorToJudgement link (`Security forces`,`committed`) and a FromJudgementToAspect link (`committed`,`politically motivated killings`). If a specific person or proper noun is named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a victim or a perpetrator. 
 
@@ -81,7 +81,7 @@ These are each types of relations are *links*.
 - You can use discontinuous extents when necessary. For example, when there is one judgement that is split across the beginning and the end of a sentence.
 
 
-#Questions for future
+#### Questions for future
 
 - There are old event in the text. References to past years. Should we have an *old* tag.
 
