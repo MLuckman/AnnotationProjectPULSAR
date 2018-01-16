@@ -3,7 +3,7 @@
 
 ## Installation an
 
-0. Download `mae-2.2.4-fatjar.jar`, from [https://github.com/keighrim/mae-annotation/releases](here) 
+0. Download `mae-2.2.4-fatjar.jar`, from https://github.com/keighrim/mae-annotation/releases
 
 1. Open the java interface at the terminal:
 `java -har mae-2.2.4-fatjar.jar`
