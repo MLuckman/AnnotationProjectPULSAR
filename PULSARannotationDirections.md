@@ -49,28 +49,37 @@ These are each types of relations are *links*.
 
 #Some Specific cases
 
-- Judgements are often verb phrases and aspects noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence: `Security forces committed politically motivated killings.`, has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the perpetrator. It then has a FromPerpetratorToJudgement link (`Security forces`,`committed`) and a FromJudgementToAspect link (`committed`,`politically motivated killings`). 
+- Judgements are often verb phrases and aspects noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence: `Security forces committed politically motivated killings.`, has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the perpetrator. It then has a FromPerpetratorToJudgement link (`Security forces`,`committed`) and a FromJudgementToAspect link (`committed`,`politically motivated killings`). If a specific person or proper noun is named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a victim or a perpetrator. 
 
-- Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: `Abuses included killing`, `killing` is both the aspect (within physcial integrity rights) and the judgement, they did it, although that is implied. There is a special extent tag for this Joint
+- If is important to keep judgement words, like `unlawful`, `arbitrary`, `intense` and `severe` in the judgement expressions. 
 
-- **Sentences with `of' can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example: `Civilian authorities did not maintain effective control of the security forces.` One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a common phrase. The `civilian government` is the perpetrator.**
+- Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: `Abuses included killing`, `killing` is both the aspect (within physcial integrity rights) and the judgement, they did it, although that is implied. There is a special extent tag for this: JointJudgementAspectExpression.
 
-- When there are two prepositions, as in `obstruction of the work of nongovernmental organizations (NGOs)`, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so `the work of nongovernmental organizations (NGOs)` is the aspect and the judgement is `obstruction of`. 
+- Sentences with `of' can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example: `Civilian authorities did not maintain effective control of the security forces.` One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a common phrase and security forces are groups that are more likely to be perpetrators. The `civilian government` is the perpetrator.
 
-- Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. They are the cause of an effect.
+- Related to the previous point, keep the phrase `rule of law` together. It is a multiword expression.
 
-- Include articles or adjectives where they are contiguous to an expression ("<The executive>", "the legislature", "severly violated")
+- When there are two prepositions, as in `obstruction of the work of nongovernmental organizations (NGOs)`, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so `the work of nongovernmental organizations (NGOs)` is the aspect and the judgement is `obstruction of`.
+
+- Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. Perpetrators are the cause of an effect.
+
+- Conversely, victims are the effected party. 
+
+- Include articles or adjectives in a tag if they would be left dangling ("<The executive>", "the legislature", "severly violated"). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in the previous sentence. 
 
 - Code as much as possible. The sentence:
-`In may, rebels crossed from Sudan into the east of the country and attacked` could be an EventFact, but since it involves physical security, `attacked` is an JointAspectJudgement. In that case, the perpetrator is the rebels, so this is not an EventFact.
+`In may, rebels crossed from Sudan into the east of the country and attacked` could be mistaken for an EventFact tag, but since it involves physical security, `attacked` is an JointAspectJudgement. In that case, the perpetrator is the rebels, so this is not an EventFact, as the sentence includes a judgement that something happened to influence physical security.
 
-- Judgements can involve more than one actor. The sentence `one of the main rebel factions signed a peace accord with the government` include the judgement expression `signed` and the aspect expression `peace accord` since this is related to physical security. The perpetrators in this case are the rebel groups, since they signed, and the government. So there should be Perpetrator tags on those two actors and FromPerpetratortoJudgement links for each of rebel groups and government to the judgement expression `signed`.
+- Judgements can involve more than one actor. The sentence `one of the main rebel factions signed a peace accord with the government` includes the judgement expression `signed` and the aspect expression `peace accord` since this is related to physical security. The perpetrators in this case are the rebel groups, since they signed, and the government. So there should be Perpetrator tags on those two actors and FromPerpetratortoJudgement links for each of rebel groups and government to the judgement expression `signed`.
 
-- Some aspects imply a set of victims, like `child soldiers`, these victims do not need to be tagged separately. So in the phrase, `the use of child soldiers`, `child soldiers` is the aspect expression and `use of` is the judgement.
+- Some aspects always imply a set or group of victims, like `child soldiers`, these victims do not need to be tagged separately. So in the phrase, `the use of child soldiers`, `child soldiers` is the aspect expression and `use of` is the judgement.
 
-- The phrasing of `reports` is tricky. A common phrase is `There were reports of` or `There were no reports of`. In these cases, `were reports` or `were no reports of`, if they are the only judgement-like expressions in the sentence, should be coded as the judgements, and then `reports` also tagged as the source of the information. 
+- The phrasing of `reports` is tricky. A common phrase is `There were reports of` or `There were no reports of`. In these cases, `were reports` or `were no reports of`, if they are the only judgement-like expressions in the sentence, should be coded as the judgements, and then `reports` also tagged as the source of the information. Care needs to be taken when linking the correct parts of these instances.
 
-- When two actors are mentioned with an `and` then include them as seperate entities, and with their links. If two actors are mentioned with a `or` then they should be joined as one entity, since we do not know which one should be used (`or` does not equal both).
+- When two actors are mentioned with an `and` then include them as seperate entities, and with their links. If two actors are mentioned with an `or` then they should be joined as one extent, since we do not know which one should be used (`or` does not equal both).
+
+- You can use discontinuous extents when necessary. For example, when there is one judgement that is split across the beginning and the end of a sentence.
+
 
 #Questions for future
 
