@@ -103,5 +103,7 @@ One could think of the `security forces` as the aspect, then the the judgement i
 
 - Add `148 children were kidnapped` as example for JointJudgementAspectExpression, ignore `were` in coding for efficiency
 
+- location info?
+
 
 
