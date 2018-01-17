@@ -82,4 +82,7 @@ this is not the perpetrator of violations, but the source of the information-->
 <!ELEMENT FromLocationToEntity EMPTY >
 <!ATTLIST FromLocationToEntity id ID prefix="LLE" #IMPLIED >
 
+<!-- #Link Negation tag for judgment-->
+<!ELEMENT NegationOfJudgment EMPTY >
+<!ATTLIST NegationOfJudgment id ID prefix="NEG" #IMPLIED >
 
