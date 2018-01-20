@@ -48,6 +48,10 @@ this is NOT the perpetrator of the violation, but the source of the info-->
 <!ELEMENT Location ( #PCDATA ) >
 <!ATTLIST Location id ID prefix="LOC" #IMPLIED >
 
+<!- #Text that identifies a negation of a judgement, such as "no" in "no report of"-->
+<!ELEMENT Negation ( #PCDATA ) >
+<!ATTLIST Negation id ID prefix="NEG" #IMPLIED >
+
 
 <!-- #Link from JudgementExpression to the AspectExpression that it governs-->
 <!ELEMENT FromJudgementToAspectExpression EMPTY >
