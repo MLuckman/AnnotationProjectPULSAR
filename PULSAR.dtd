@@ -88,5 +88,5 @@ this is not the perpetrator of violations, but the source of the information-->
 
 <!-- #Link Negation tag for judgment-->
 <!ELEMENT NegationOfJudgment EMPTY >
-<!ATTLIST NegationOfJudgment id ID prefix="NEG" #IMPLIED >
+<!ATTLIST NegationOfJudgment id ID prefix="NEGToJudge" #IMPLIED >
 
