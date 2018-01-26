@@ -1,0 +1,95 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="Content-Style-Type" content="text/css" />
+  <meta name="generator" content="pandoc" />
+  <title></title>
+  <style type="text/css">code{white-space: pre;}</style>
+</head>
+<body>
+<h1 id="direction-to-annotate-using-pulsar-rules">Direction to Annotate using PULSAR-rules</h1>
+<h2 id="installation">Installation</h2>
+<ol start="0" style="list-style-type: decimal">
+<li><p>Download <code>mae-2.2.4-fatjar.jar</code>, from https://github.com/keighrim/mae-annotation/releases</p></li>
+<li><p>Open the java interface at the terminal: <code>java -jar mae-2.2.4-fatjar.jar</code></p></li>
+</ol>
+<p>If you get an error you may need to install java and the java jdk. Please install Java version &gt;8. These are available <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a></p>
+<ol start="2" style="list-style-type: decimal">
+<li><p>If mae opened just fine, then you need to open the document-type definition file by going to <strong>File</strong> menu (top left), <img src="Images/ScreenShot2.png" alt="File menu" /> then select <strong>New Task Definition</strong>, and find <code>PULSAR.dtd</code>. That should load the possible annotation types, and there should now be different colors and names towards the bottom of the screen, like so: <img src="Images/ScreenShot3.png" alt="After dtd is loaded" /></p></li>
+<li><p>Then open the file to annotate, by going to the <strong>File</strong> menu again, selecting <strong>Open Document</strong> and selecting your next document. <img src="Images/ScreenShot4.png" alt="MAE screen" /> This is an example of what the resulting screen should look like, but you will have a different document. <img src="Images/ScreenShot5.png" alt="File menu" />!</p></li>
+</ol>
+<h2 id="goals">Goals</h2>
+<p>The goals are to mark up human rights reports so that we can identify what aspects of human rights are being judged over time, as well as who are the perpetrators, victims and sources of information are. We have special tags for negation too, as that reverses a judgement.</p>
+<h2 id="definitions">Definitions</h2>
+<ul>
+<li><em>Aspects of human rights</em>: Rights are moral or legal rules. They are abstract in the sense that a specific person, place or thing is not a right. Privacy is a right. Physical integrity, meaning not having someone threaten, torture or attack you, is a right. The aspects are conceptually separate from the judgements offered on them (See below). Aspects are often noun phrases, but not propoer nouns. There are seven broad classes of rights:
+<ul>
+<li>Physical integrity rights</li>
+<li>Civil liberties</li>
+<li>Political rights</li>
+<li>Government corruption and transparency</li>
+<li>Discrimination, societal abuse and Trafficing in persons</li>
+<li>Worker's rights</li>
+<li>Government attitude towards international and nongovernmental investigations of alleged violations of rights</li>
+</ul></li>
+<li><p><em>Judgement of protection or violation of an aspect of human rights</em>: These reports provide information about whether a country, in a given year, has protected or violated specifiv types of rights; and provides information and events related to those claims. A judgement tells us either directly or indirectly whether a right has been violated protected, or possibly that there is no information about this. One way to think about whether a phrase is an aspect of human rights or a judgement on an aspect is to think about whether you could attach multiple different judgements to that expression. For example, in the phrase: <code>Security forces committed widespread torture</code>, the aspect is torture, a form of physical integrity right. We could imagine another sentence that stated, <code>There were no reports that the Security forces used torture</code>, same aspect, different judgement. Judgements are often verbs, adverbs or adjectives.</p></li>
+<li><p><em>Perpetrator</em>: These are the people or groups, often proper nouns, who have been the actors in the judged actions. Perpetrators ussually are identified in these documents as having done negative things, but that is not always the case. A group can perpetrate a peace agreement, for example.</p></li>
+<li><p><em>Victim</em>: These are people or groups, often proper nouns, who have been acted upon in the judged actions. Victims in these documents are often the ones suffering from the abuse of these rights. However, people can be acted upon in a postive sense (for them), as they could be given immunity by the government.</p></li>
+<li><p><em>Source of information on the judgement</em>: While we know the author the reports (eg the US State Department or Amnesty International), often they are writing about others. The source of the judgement is often media reports, other NGOs. They can also be the opposition or even the government. The absence of reports is itself a source. So in the phrase <code>There were no reports that the Security forces used torture</code>, <code>no reports</code> is the source of the information on the judgement.</p></li>
+<li><p><em>Location</em>: A specific place that you could point to on a globe, ussually proper nouns, but not always. These can be cites, countries, regions, or specific houses.</p></li>
+<li><p><em>Time</em>: A specfic time or date. This helps us track when the reports are talking about past events and when they are talking about current events.</p></li>
+<li><p><em>Negation</em>: There are special words that invert a judgement, these negate a judgement. These words are important to our project and we want to capture as many as we can. <code>The government did not protect civil liberties</code> carries a very different judgement as compared to <code>The government did protect civil liberties</code>, because of the negation <code>no</code>.</p></li>
+<li><p><em>Phrase type</em>: More generally, there are many phrases or whole sentences that do not offer a clear judgement. In that case, we are not interested in those and they can be tagged as either an old event or fact, a current event or fact, or as ambiguous. For example <code>10 years ago, the President was elected.</code> is an old fact/event.</p></li>
+</ul>
+<h3 id="tagging-chucks-of-contiguous-or-discontinuous-text-as-entities">Tagging Chucks of Contiguous or Discontinuous Text as Entities</h3>
+<p>For our purposes text can tell us about any of the previously defined concepts. We have designed <em>tags</em>, also known as <em>entities</em>, for you to use to denote what semantic role a phrase or word is playing in a sentence. These are defined in the PULSAR.dtd file. The point of the MAE software is to allow you to efficiently annotate the text, marking the language in documents with the appropriate tags.</p>
+<p>To make a tag, when in normal mode (see next paragraph), simply select the text and then control-click on that highlighted text. Then select the extent tag that is appropriate.</p>
+<p>Importantly, tags can be continuous, where you are just highlight from left to right or right to left, contiguous characters and/or white space; or discontinuous, where there is a gap between the words that are part of the same tag. For example, the phrase <code>Extreme surveillance by the government was widespread.</code> The judgement here is discontinuous because it includes <code>extreme</code> and <code>was widespread</code>. In MAE there is a mode for discontinous span selection. Just select <strong>Mode</strong>, then <strong>Switch to discontinous span selection</strong>. Then just do command-e to switch back to regular mode, or click on <strong>Mode</strong> again and then <strong>Return to normal mode</strong>.</p>
+<p>Everytime you tag a section of text, it creates meta data on the tag type, and where the span begins and ends (with multiple values if the span is discontinous). You can see some of this near the bottom of the screen.</p>
+<p>To delete a tag. Control-click on it.</p>
+<p><em>One note of warning: it is common when highlighting text to miss the first or last letter of a span, please try and be careful with this.</em></p>
+<h3 id="tagging-links-between-entities">Tagging Links Between Entities</h3>
+<p>In addition, we want to identify connections between these tagged chunks of text. Specifically, we want to be able to identify links:</p>
+<ol style="list-style-type: decimal">
+<li>between a judgement and the aspect of human right the judgement is offered on</li>
+<li>between the perpetrator judged and the judgement of their action</li>
+<li>between the victim of a judged action and the judgement</li>
+<li>between the souce of information for a judgement and the judgement</li>
+<li>between negation and the what is being negated, particularly the judgement</li>
+<li>between a location and what is located there</li>
+<li>between a time what took place at that time</li>
+</ol>
+<p>These are each types of relations are <em>links</em>.</p>
+<p>To code links, you first need to have the tags/entities coded. When you have the entities all coded for a sentence, and you are ready to create links, select <strong>Mode</strong>, and then <strong>Switch to argument selection mode</strong>, to create links you are selecting the arguments. You can also **Switch to argument selection mode&quot; with the command-2 shortcut. In this mode, select anywhere in the tag for the first part of the link and click, then select anywhere in the tag for the second part of the link and click. You should see at least two discontinous highlighted sections. Control-click on one of these, and select the appropriate link. A dialogue will pop up that will let you choose the appropriate link type.</p>
+<h3 id="examples">Examples</h3>
+<h4 id="some-specific-cases">Some Specific cases</h4>
+<ul>
+<li><p>Judgements are often verb phrases and aspects (non-proper) noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence:</p>
+<pre><code>Security forces committed politically motivated killings.</code></pre>
+<p>has <code>politically motivated killings</code> as the aspect, <code>committed</code> as the judgement, and <code>Security forces</code> as the perpetrator. It then has a <strong>FromPerpetratorToJudgement</strong> link (<code>Security forces</code>,<code>committed</code>) and a <strong>FromJudgementToAspect</strong> link (<code>committed</code>,<code>politically motivated killings</code>). If a specific person or proper noun is named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a victim or a perpetrator.</p></li>
+<li><p>If is important to keep judgement words, like <code>unlawful</code>, <code>arbitrary</code>, <code>intense</code> and <code>severe</code> in the judgement expressions.</p></li>
+<li><p>Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: <code>Abuses included killing</code>, <code>killing</code> is both the aspect (within physcial integrity rights) and the judgement, they did it, although that is implied. There is a special extent tag for this: JointJudgementAspectExpression.</p></li>
+<li><p>Sentences with <code>of</code> can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example:</p>
+<pre><code>Civilian authorities did not maintain effective control of the security forces.</code></pre>
+<p>One could think of the <code>security forces</code> as the aspect, then the the judgement is <code>did not maintain effective control of</code>. Alternatively, one could think of <code>control of the security forces</code> as the aspect and then the judgement would be <code>did not maintain effective</code>. In this case, the second coding is slightly preferable, but only because <code>control of the security forces</code> is a common phrase and security forces are groups that are more likely to be perpetrators. The <code>civilian government</code> is the perpetrator.</p></li>
+<li><p>Related to the previous point, keep the phrase <code>rule of law</code>, <code>freedom of speech</code>, <code>freedom of expression</code>, <code>freedom of movement</code>, <code>freedom of assembly</code>, <code>freedom of association</code>, <code>freedom of press</code> etc. together. It is a multiword expression.</p></li>
+<li><p>When there are two prepositions, as in <code>obstruction of the work of nongovernmental organizations (NGOs)</code>, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so <code>the work of nongovernmental organizations (NGOs)</code> is the aspect and the judgement is <code>obstruction of</code>.</p></li>
+<li><p>Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. Perpetrators are the cause of an effect.</p></li>
+<li><p>Conversely, victims are the effected party.</p></li>
+<li><p>Include articles or adjectives in a tag if they would be left dangling (&quot;<The executive>&quot;, &quot;the legislature&quot;, &quot;severly violated&quot;). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in the previous sentence.</p></li>
+<li><p>Code as much as possible. The sentence: <code>In may, rebels crossed from Sudan into the east of the country and attacked</code> could be mistaken for an EventFact tag, but since it involves physical security, <code>attacked</code> is an JointAspectJudgement. In that case, the perpetrator is the rebels, so this is not an EventFact, as the sentence includes a judgement that something happened to influence physical security.</p></li>
+<li><p>Judgements can involve more than one actor. The sentence <code>one of the main rebel factions signed a peace accord with the government</code> includes the judgement expression <code>signed</code> and the aspect expression <code>peace accord</code> since this is related to physical security. The perpetrators in this case are the rebel groups, since they signed, and the government. So there should be Perpetrator tags on those two actors and FromPerpetratortoJudgement links for each of rebel groups and government to the judgement expression <code>signed</code>.</p></li>
+<li><p>Some aspects always imply a set or group of victims, like <code>child soldiers</code>, these victims do not need to be tagged separately. So in the phrase, <code>the use of child soldiers</code>, <code>child soldiers</code> is the aspect expression and <code>use of</code> is the judgement.</p></li>
+<li><p>The phrasing of <code>reports</code> is tricky. A common phrase is <code>There were reports of</code> or <code>There were no reports of</code>. In these cases, <code>were reports</code> or <code>were no reports of</code>, if they are the only judgement-like expressions in the sentence, should be coded as the judgements, and then <code>reports</code> also tagged as the source of the information. Care needs to be taken when linking the correct parts of these instances.</p></li>
+<li><p>When two actors are mentioned with an <code>and</code> then include them as seperate entities, and with their links. If two actors are mentioned with an <code>or</code> then they should be joined as one extent, since we do not know which one should be used (<code>or</code> does not equal both).</p></li>
+<li><p>You can use discontinuous extents when necessary. For example, when there is one judgement that is split across the beginning and the end of a sentence.</p></li>
+</ul>
+<h4 id="questions-for-future">Questions for future</h4>
+<ul>
+<li><p>Some sentences have extensive details about an aspect, in particular. Should allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity?</p></li>
+<li><p>Add link from an Indirect Aspect to an EventFact to resolve coreferene</p></li>
+<li><p>Add <code>148 children were kidnapped</code> as example for JointJudgementAspectExpression, ignore <code>were</code> in coding for efficiency</p></li>
+</ul>
+</body>
+</html>
