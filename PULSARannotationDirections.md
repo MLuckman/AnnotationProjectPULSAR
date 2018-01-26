@@ -21,7 +21,7 @@ If you get an error you may need to install java and the java jdk. Please instal
 
 ## Goals
 
-The goals are to mark up human rights reports so that we can identify what aspects of human rights are being judged over time, as well as who are the perpetrators, victims and sources of information.
+The goals are to mark up human rights reports so that we can identify what aspects of human rights are being judged over time, as well as who are the perpetrators, victims and sources of information are. We have special tags for negation too, as that reverses a judgement.
 
 
 ### Tagging Chucks of Contiguous Text as Entities
