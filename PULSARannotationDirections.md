@@ -8,9 +8,14 @@
 1. Open the java interface at the terminal:
 `java -jar mae-2.2.4-fatjar.jar`
 
-2. Open the document-type definition file by going to file menu, then select "New Task Definition", and find `PULSARv2.dtd`.
+If you get an error you may need to install java and the java jdk. Please install Java version >8. These are available [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-3. Then open the file to annotate, by going to file menu again, selecting "Open Document" and selecting your next document.
+2. If mae opened just fine, then you need to open the document-type definition file by going to file menu (top left), then select "New Task Definition", and find `PULSAR.dtd`. That should load the possible annotation types, and there should now be different colors and names towards the bottom of the screen.
+
+![MAE screen](Images/ScreenShot1.png)![File menu](Images/ScreenShot2.png)![After dtd is loaded](Images/ScreenShot3.png)
+
+3. Then open the file to annotate, by going to file menu again, selecting "Open Document" and selecting your next document. The image below just gives an example.
+![MAE screen](Images/ScreenShot4.png)![File menu](Images/ScreenShot5.png)!
 
 
 
@@ -23,13 +28,13 @@ The goals are to mark up human rights reports so that we can identify what aspec
 
 For our purposes text can serve five different relevant purposes. It can signal:
 
-1) what aspects of human rights are being discussed in a given sentence, 
+1) what aspects of human rights are being discussed in a given sentence,
 2) what judgements, if any are being offered in a sentence
 3) who the perpetrator of any violations is
 4) who the victim is of any violations
 5) what the source of information is for a judgement
 
-Each of these five purposes is considered an *entity*. 
+Each of these five purposes is considered an *entity*.
 
 
 ### Tagging Links Between Entities
@@ -49,17 +54,17 @@ These are each types of relations are *links*.
 
 #### Some Specific cases
 
-- Judgements are often verb phrases and aspects noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence: 
+- Judgements are often verb phrases and aspects noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence:
     ```
     Security forces committed politically motivated killings.
     ```
-has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the                  perpetrator.   It then has a __FromPerpetratorToJudgement__ link (`Security forces`,`committed`) and a                          __FromJudgementToAspect__ link (`committed`,`politically motivated killings`). If a specific person or proper noun is         named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a           victim or a perpetrator. 
+has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the                  perpetrator.   It then has a __FromPerpetratorToJudgement__ link (`Security forces`,`committed`) and a                          __FromJudgementToAspect__ link (`committed`,`politically motivated killings`). If a specific person or proper noun is         named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a           victim or a perpetrator.
 
-- If is important to keep judgement words, like `unlawful`, `arbitrary`, `intense` and `severe` in the judgement expressions. 
+- If is important to keep judgement words, like `unlawful`, `arbitrary`, `intense` and `severe` in the judgement expressions.
 
 - Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: `Abuses included killing`, `killing` is both the aspect (within physcial integrity rights) and the judgement, they did it, although that is implied. There is a special extent tag for this: JointJudgementAspectExpression.
 
-- Sentences with `of` can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example: 
+- Sentences with `of` can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example:
 ```
 Civilian authorities did not maintain effective control of the security forces.
 ```
@@ -71,9 +76,9 @@ One could think of the `security forces` as the aspect, then the the judgement i
 
 - Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. Perpetrators are the cause of an effect.
 
-- Conversely, victims are the effected party. 
+- Conversely, victims are the effected party.
 
-- Include articles or adjectives in a tag if they would be left dangling ("<The executive>", "the legislature", "severly violated"). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in the previous sentence. 
+- Include articles or adjectives in a tag if they would be left dangling ("<The executive>", "the legislature", "severly violated"). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in the previous sentence.
 
 - Code as much as possible. The sentence:
 `In may, rebels crossed from Sudan into the east of the country and attacked` could be mistaken for an EventFact tag, but since it involves physical security, `attacked` is an JointAspectJudgement. In that case, the perpetrator is the rebels, so this is not an EventFact, as the sentence includes a judgement that something happened to influence physical security.
@@ -102,8 +107,3 @@ One could think of the `security forces` as the aspect, then the the judgement i
 - Add link from an Indirect Aspect to an EventFact to resolve coreferene
 
 - Add `148 children were kidnapped` as example for JointJudgementAspectExpression, ignore `were` in coding for efficiency
-
-
-
-
-
