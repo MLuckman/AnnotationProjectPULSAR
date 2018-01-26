@@ -1,0 +1,115 @@
+section_names,Natural Language Interpretation
+Section_Attitude,Governmental Attitude Regarding International and Nongovernmental Investigation of Alleged Violations of Human Rights
+Section_Attitude_Sub_GovernmentHumanRightsBodies,Government Human Rights Bodies (Local government or government human rights bodies attempting to investigate human rights cases)
+Section_Attitude_Sub_UNandOtherInternationalBodies,The United Nations or Other International Bodies (nternational organizations attempting to investigate human rights cases)
+Section_Civil,Respect for Civil Liberties
+Section_Civil_Sub_Assembly,Freedom of Peaceful Assembly and Association
+Section_Civil_Sub_Assembly_Sub_FreedomofAssembly,Freedom of association
+Section_Civil_Sub_Assembly_Sub_FreedomofAssociation,Freedom of assembly
+Section_Civil_Sub_Movement,"Freedom of Movement, Internally Displaced Persons, Protection of Refugees, and Stateless Persons"
+Section_Civil_Sub_Movement_Sub_AbuseofMigrantsRefugees,Abuse of Migrants and Refugees
+Section_Civil_Sub_Movement_Sub_Citizenship,Citizenship (granting citizenship to refugees)
+Section_Civil_Sub_Movement_Sub_EmigrationandRepatriation,Emigration and Repatriation
+Section_Civil_Sub_Movement_Sub_Exile,Exile (forced exile)
+Section_Civil_Sub_Movement_Sub_ForeignTravel,Foreign Travel (freefom of foreign travel)
+Section_Civil_Sub_Movement_Sub_IncountryMovement,Incountry Movement (freedom of domestic travel)
+Section_Civil_Sub_Movement_Sub_InternallyDisplacedPersons,Internally Displaced Persons
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees,Protection of Refugees
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_AccesstoAsylum,Access to Asylum ( granting of asylum )
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_AccesstoBasicServices,Access to Basic Services (access to government-provided health care and education)
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_DurableSolutions,Durable Solutions (durable settlement solutions for refugees)
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_Employment,Employment (Employment Opportunity for refugees)
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_FreedomofMovement,Freedom of Movement of refugees
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_Nonrefoulement,Non-Refoulement of refugees (deporting refugees)
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_RefugeeAbuse,Refugee Abuse
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_SafeCountryofOriginTransit,Safe Country of Origin/Transit of refugees (By law persons entering the country from another safe country are not eligible for asylum)
+Section_Civil_Sub_Movement_Sub_ProtectionofRefugees_Sub_TemporaryProtection,Temporary Protection(provided protection to individuals who did not qualify as refugees)
+Section_Civil_Sub_Movement_Sub_StatelessPersons,Stateless Persons (a person who is not considered as a national by any state)
+Section_Civil_Sub_Religion,Freedom of Religion
+Section_Civil_Sub_SpeechPress,Freedom of Speech and Press
+Section_Civil_Sub_SpeechPress_Sub_AcademicCultural,Academic freedom or Cultrual Events
+Section_Civil_Sub_SpeechPress_Sub_InternetFreedom,Internet Freedom
+Section_Civil_Sub_SpeechPress_Sub_Status,Status of Speech and Press Freedom
+Section_Civil_Sub_SpeechPress_Sub_Status_Sub_ActionstoExpandPressFreedom,Actions to Expand Press Freedom
+Section_Civil_Sub_SpeechPress_Sub_Status_Sub_CensorshiporContenRestrictions,Censorship or Content Restrictions
+Section_Civil_Sub_SpeechPress_Sub_Status_Sub_FreedomofPress,Freedom of Press
+Section_Civil_Sub_SpeechPress_Sub_Status_Sub_FreedomofSpeech,Freedom of Speech  
+Section_Civil_Sub_SpeechPress_Sub_Status_Sub_LibelSlanderLaws,Libel/Slander Laws (libel laws used as grounds to suppress criticism of government figures and politically objectionable views
+Section_Civil_Sub_SpeechPress_Sub_Status_Sub_NationalSecurity,National Security  (national security used as grounds to suppress criticism of government figures and politically objectionable views
+Section_Civil_Sub_SpeechPress_Sub_Status_Sub_NongovernmentalImpact,Nongovernmental Impact (Progovernment NGOs sought to limit freedom of expression through criminal complaints of allegedly seditious speech
+Section_Civil_Sub_SpeechPress_Sub_Status_Sub_ViolenceandHarassment,Violence and Harassment of Journalists
+Section_Corruption,Corruption and Lack of Transparency in Government
+Section_Corruption_Sub_CorruptionTransparency,Corruption and Transparency (The government takes active role in addressing official corruption )
+Section_Corruption_Sub_FinancialDisclosure,Financial Disclosure (law requires income and asset disclosure by appointed or elected officials
+Section_Corruption_Sub_PublicAccesstoInformation,Public Access to Information (citizens have the right of access to information held by the state)
+Section_Discrimination,"Discrimination, Societal Abuses, and Trafficking in Person"
+Section_Discrimination_Sub_AntiSemitism,Anti-Semitism
+Section_Discrimination_Sub_Children,Rights of Child
+Section_Discrimination_Sub_Children_Sub_BirthRegistration,Birth Registration (how Citizenship is transmitted by a citizen father or mother to his child.)
+Section_Discrimination_Sub_Children_Sub_ChildAbuse,Child Abuse
+Section_Discrimination_Sub_Children_Sub_ChildFGM,Child FGM (female genital mutilation for children)
+Section_Discrimination_Sub_Children_Sub_ChildMarriage,Child Marriage (Forced Early Marriage for Children)
+Section_Discrimination_Sub_Children_Sub_ChildSoldiers,Child Soldiers
+Section_Discrimination_Sub_Children_Sub_DisplacedChildren,Displaced Children (refugees and migrants who were unaccompanied minors)
+Section_Discrimination_Sub_Children_Sub_Education,Education for Children
+Section_Discrimination_Sub_Children_Sub_HarmfulTraditionalPractices,"Harmful Traditional Practices (a harmful traditional practice means all traditional behavior, attitudes, or practices that negatively affect the fundamental rights of children)"
+Section_Discrimination_Sub_Children_Sub_Infanticide,"Infanticide or Infanticide of Children (parents, usually young mothers, abandoned newborns, sometimes leading to the newborns’ death.)"
+Section_Discrimination_Sub_Children_Sub_InstitutionalizedChildren,"Institutionalized Children (mental facility patients were physically restrained, forcibly medicated, or put in seclusion rooms for prolonged periods, including children)"
+Section_Discrimination_Sub_Children_Sub_InternationalChildAbductions,International Child Abductions (International child abduction is the removal or retention of a child outside their country of habitual residence in breach of another parent or guardian's custody rights.)
+Section_Discrimination_Sub_Children_Sub_MedicalCare,Medical Care (providing medical treatment for children)
+Section_Discrimination_Sub_Children_Sub_SexualExploitationofChildren,"Sexual Exploitation of Children (child prostitute, child pornography)"
+Section_Discrimination_Sub_HIVandAIDSSocialStigma,HIV and AIDS and Social Stigma (discrimination due to the stigma associated with being HIV positive)
+Section_Discrimination_Sub_IndigenousPeople,Indigenous People (discrimination against indigenous population)
+Section_Discrimination_Sub_NationalRacialEthnicMinorities,"Discrimination Against National, Racial, and Ethnic Minorities"
+Section_Discrimination_Sub_OtherSocietalAbusesandDiscrimination,Other Social Abuses and Discrimination (discrimination based on social status)
+Section_Discrimination_Sub_PersonswithDisabilities,Discrimination Against People with Physical Disabilities
+Section_Discrimination_Sub_SocietalDiscriminationSexualOrientation,Societal Discrimination based on Sexual Orientation (Discrimination against persons based on sexual orientation and gender identity)
+Section_Discrimination_Sub_TraffickinginPersons,Trafficking in Persons (trafficking in persons for sexual exploitation and forced labor )
+Section_Discrimination_Sub_Women,Women (Women's rights)
+Section_Discrimination_Sub_Women_Sub_Discrimination,Women and Discrimination
+Section_Discrimination_Sub_Women_Sub_FGM,FGM (female genital mutilaiton for women)
+Section_Discrimination_Sub_Women_Sub_GenderbiasedSexSelection,Gender-biased sex selection ( gender-biased sex-selective abortion prefering boys to girls)
+Section_Discrimination_Sub_Women_Sub_HarmfulTraditionalPractices,"Harmful Traditional Practices (a harmful traditional practice means all traditional behavior, attitudes, or practices that negatively affect the fundamental rights of Women)"
+Section_Discrimination_Sub_Women_Sub_RapeandDomesticViolence,Rape and Domestic Violence
+Section_Discrimination_Sub_Women_Sub_ReproductiveRights,"Reproductive Rights: (the right to decide the number, spacing, and timing of children, free from discrimination, coercion, or violence)"
+Section_Discrimination_Sub_Women_Sub_SexualHarassment,Sexual harassment
+Section_Integrity,"Respect for the Integrity of the Person (physical integirty rights includes: freedoms from torture, disappearance, political imprisonment, and extrajudicial killing )"
+Section_Integrity_Sub_ArrestDetention,Arbitrary Arrest or Detention (prohibits aribitrary arrest or detention)
+Section_Integrity_Sub_ArrestDetention_Sub_ArrestDetain_Sub_AbilitytoChallenge,Ability to Challenge Lawfulness of Detention before a Court (Persons arrested or detained are entitled to challenge in court the legal basis or arbitrary nature of their detention and obtain prompt release)
+Section_Integrity_Sub_ArrestDetention_Sub_ArrestDetain_Sub_Amnesty,Granting Amnesty (grant amnesty for political prisoners or detained political opposition leaders)
+Section_Integrity_Sub_ArrestDetention_Sub_ArrestDetain_Sub_ArbitraryArrest,Arbitrary Arrest (arbitrarily arrested and detained persons)
+Section_Integrity_Sub_ArrestDetention_Sub_ArrestDetain_Sub_DetentionofRejectedAsylumStatelessPersons,Detention of Rejected Asylum Seekers or Stateless Persons (detaining some unsuccessful applicants for asylum pending deportation)
+Section_Integrity_Sub_ArrestDetention_Sub_ArrestDetain_Sub_PretrialDetention,"Pretrial Detention (The large number of detainees, shortage of judges and court administrators, and judicial inefficiency often result in trial delays and detention)"
+Section_Integrity_Sub_ArrestDetention_Sub_ArrestDetain,"ARREST PROCEDURES AND TREATMENT OF DETAINEES (an individual should be informed of charges at the time of arrest in detail and with interpretation as needed, and for judicial determination without undue delay)"
+Section_Integrity_Sub_ArrestDetention_Sub_PoliceSecurity,ROLE OF THE POLICE AND SECURITY APPARATUS (police and any forms of security force or law enforcement should follow the legal procedures in maintaining law and order)
+Section_Integrity_Sub_Denial,"Denial of Fair Public Trial (states shold provides for an independent judiciary and not influnced by any other branches of government or corruption ,etc)"
+Section_Integrity_Sub_Denial_Sub_CivilJudicialProceduresandRemedies,"Civil Judicial Procedures and Remedies (Individuals may seek civil remedies for human rights violations through domestic courts. Administrative as well as judicial remedies exist for alleged wrongs, including human rights violations.)"
+Section_Integrity_Sub_Denial_Sub_PoliticalPrisoners,Political Prisoners and Detainees (a government prosecutes and detains members of political opposition parties for political purposes or people expressiing political opinions)
+Section_Integrity_Sub_Denial_Sub_PropertyRestitution,"Property Restitution (governments should give proper notification or follow the proper legal requirements to compensate damaged property such as houses, etc.)"
+Section_Integrity_Sub_Denial_Sub_TrialProcedures,"Trial Procedures (all persons are equal before the law, that defendants are innocent until proven guilty, and that they have the right to a defense lawyer and a speedy public trial. )"
+Section_Integrity_Sub_Disappearance,Enforced Disappearances (enforced disappearance occurs when a person is secretly abducted or imprisoned by a state or political organization or by a third party with the authorization)
+Section_Integrity_Sub_Extrajudicial,Extrajudicial Killing (An extrajudicial killing  is the killing of a person by governmental authorities without the sanction of any judicial proceeding or legal process.)
+Section_Integrity_Sub_Force,"Use of Excessive Force and Other Abuses in Internal Conflicts (internal conflict often results in civilian deaths, abductions, prisoner abuse, property damage, displacement of residents, and other abuses.)"
+Section_Integrity_Sub_Force_Sub_Abductions,Abductions/Kidpanning (rebel groups often target and abduct government workers and citizens perceived to be cooperating with the other party)
+Section_Integrity_Sub_Force_Sub_ChildSoldiers,Child Soldiers
+Section_Integrity_Sub_Force_Sub_Killings,Killings (killing innocent civilians in internal conflicts)
+Section_Integrity_Sub_Force_Sub_OtherConflictRelatedAbuses,"Other Conflict Related Abuses (looting, arson attack, sabotage, etc)"
+Section_Integrity_Sub_Force_Sub_PhysicalAbuse,"Physical Abuse, Punishment, and Torture (physical abuses, punishment and torutre in internal conflicts)"
+Section_Integrity_Sub_Privacy,"Arbitrary or Unlawful Interference with Privacy, Family, Home, or Correspondence (every person has the right to own, use, enjoy, sell, and transfer property and the private home is inviolable)"
+Section_Integrity_Sub_Torture,"Torture and Other Cruel, Inhuman, or Degrading Treatment or Punishment"
+Section_Integrity_Sub_Torture_Sub_PrisonDetentionCenterConditions,Prison and Detention Center Conditions
+Section_Integrity_Sub_Torture_Sub_PrisonDetentionCenterConditions_Sub_Administration,"Adminisetration (prisoners to submit complaints to judicial authorities without censorship, adequate access to visitors and religious observance, etc)"
+Section_Integrity_Sub_Torture_Sub_PrisonDetentionCenterConditions_Sub_Improvements,Improvements (improvement in conditions of detention facilities)
+Section_Integrity_Sub_Torture_Sub_PrisonDetentionCenterConditions_Sub_Monitoring,Independent Monitoring (governments should permit prison monitoring by independent nongovernmental observers)
+Section_Integrity_Sub_Torture_Sub_PrisonDetentionCenterConditions_Sub_PhysicalConditions,"Physical Conditions (such as overcrowding, sanitary facilities, adeaute food and warter and outdoor exercises, etc)"
+Section_Political,Freedom to Participate in the Political Process
+Section_Political_Sub_Election,Elections and Political Participation
+Section_Political_Sub_Election_Sub_ParticipationofWomenandMinorities,"Participation of Women and Minorities (no laws limiting the participation of women or other minorities in the political process, and women or minorities participated.)"
+Section_Political_Sub_Election_Sub_PoliticalParties,"Political Parties and Political Participation (every citizen has the right to take part in public affairs and that this right includes forming political parties, participating in their activities, and being elected for any position within a political party.)"
+Section_Political_Sub_Election_Sub_RecentElections,Recent Elections (information about recent elections)
+Section_Worker,Worker Rights
+Section_Worker_Sub_AcceptableConditions,"Acceptable Conditions of Work(The law prescribes occupational, safety, and health standards. It states every employer must provide safe and healthy conditions for workers. The law recognizes the right of workers to remove themselves from dangerous work situations, and workers may challenge dismissals based on such actions in court.)"
+Section_Worker_Sub_DiscriminationEmployment,"Discrimination with Respect to Employment and Occupation (prohibit discrimination with regard to race, sex, color, beliefs, language, or disability )"
+Section_Worker_Sub_ForcedCompulsory,"Prohibition of Forced or Compulsory Labor (prohibit any person who “buys, sells, gives [a human being] as a present, or deals in human beings; and anyone who brings into the country or exports from it a human being with the intent of taking advantage of him.” )"
+Section_Worker_Sub_MinimumAge,Prohibition of Child Labor and Minimum Age for Employment (the laws prohibits child labor and sets country’s minimum work age as “the minimum age for admission to employment which is free of any hazards may not be lower than the age of completion of compulsory education and may not be less than 14 years)
+Section_Worker_Sub_OrganizeBargain,Freedom of Association and the Right to Collective Bargaining (workers have the right of salaried private sector employees to organize and bargain collectively without government interference.)
