@@ -10,11 +10,15 @@
 
 If you get an error you may need to install java and the java jdk. Please install Java version >8. These are available [here](http://www.oracle.com/technetwork/java/javase/downloads/index.html)
 
-2. If mae opened just fine, then you need to open the document-type definition file by going to **File** menu (top left), then select **New Task Definition**, and find `PULSAR.dtd`. That should load the possible annotation types, and there should now be different colors and names towards the bottom of the screen.
-![File menu](Images/ScreenShot2.png)![After dtd is loaded](Images/ScreenShot3.png)
+2. If mae opened just fine, then you need to open the document-type definition file by going to **File** menu (top left),
+![File menu](Images/ScreenShot2.png)
+then select **New Task Definition**, and find `PULSAR.dtd`. That should load the possible annotation types, and there should now be different colors and names towards the bottom of the screen, like so:
+![After dtd is loaded](Images/ScreenShot3.png)
 
-3. Then open the file to annotate, by going to the **File** menu again, selecting **Open Document** and selecting your next document. The two images below just gives an example.
-**![MAE screen](Images/ScreenShot4.png)![File menu](Images/ScreenShot5.png)!
+3. Then open the file to annotate, by going to the **File** menu again, selecting **Open Document** and selecting your next document.
+![MAE screen](Images/ScreenShot4.png)
+This is an example of what the resulting screen should look like, but you will have a different document.
+![File menu](Images/ScreenShot5.png)!
 
 
 
@@ -128,13 +132,7 @@ One could think of the `security forces` as the aspect, then the the judgement i
 
 #### Questions for future
 
-- There are old event in the text. References to past years. Should we have an *old* tag.
-
-- Some sentences have extensive details about an aspect, in particular. Should allo this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity?
-
-- Add negation entity and link FromNegationToJudgement
-
-- Add link from judgement to OldEventOrFact
+- Some sentences have extensive details about an aspect, in particular. Should allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity?
 
 - Add link from an Indirect Aspect to an EventFact to resolve coreferene
 
