@@ -145,4 +145,4 @@ One could think of the `security forces` as the aspect, then the the judgment is
 <Victim>children</Victim>
 <AspectExpression>kidnapped</AspectExpression>
 ``
-with a the two relevant links (FromJudgementToAspect and FromJudgementToVictim).
+with the two relevant links (FromJudgementToAspect and FromJudgementToVictim).
