@@ -37,17 +37,19 @@ The goals are to mark up human rights reports so that we can identify what aspec
     + Worker's rights
     + Government attitude towards international and nongovernmental investigations of alleged violations of rights
 
+*We also have a list of over 100 aspects in this [file](Aspect_Categories_with_Natural_Language_Interpretation.csv). When in doubt you can search this file to see if a phrase or something close comes up. If it does, then this should be an aspect.* As one example, `excessive force` is an aspect in this file. 
+
 - *Judgement of protection or violation of an aspect of human rights*: These reports provide information about whether a country, in a given year, has protected or violated specifiv types of rights; and provides information and events related to those claims. A judgement tells us either directly or indirectly whether a right has been violated protected, or possibly that there is no information about this. One way to think about whether a phrase is an aspect of human rights or a judgement on an aspect is to think about whether you could attach multiple different judgements to that expression. For example, in the phrase: `Security forces committed widespread torture`, the aspect is torture, a form of physical integrity right. We could imagine another sentence that stated, `There were no reports that the Security forces used torture`, same aspect, different judgement. Judgements are often verbs, adverbs or adjectives.
 
 - *Perpetrator*: These are the people or groups, often proper nouns, who have been the actors in the judged actions. Perpetrators ussually are identified in these documents as having done negative things, but that is not always the case. A group can perpetrate a peace agreement, for example.
 
 - *Victim*: These are people or groups, often proper nouns, who have been acted upon in the judged actions. Victims in these documents are often the ones suffering from the abuse of these rights. However, people can be acted upon in a postive sense (for them), as they could be given immunity by the government.
 
-- *Source of information on the judgement*: While we know the author the reports (eg the US State Department or Amnesty International), often they are writing about others. The source of the judgement is often media reports, other NGOs. They can also be the opposition or even the government. The absence of reports is itself a source. So in the phrase `There were no reports that the Security forces used torture`, `no reports` is the source of the information on the judgement.
+- *Source of information on the judgement*: While we know the author the reports (eg the US State Department or Amnesty International), often they are writing about others. The source of the judgement is often media reports, other NGOs. They can also be the opposition or even the government. The absence of reports is itself a source. So in the phrase `There were no reports that the Security forces used torture`, `no reports` is the source of the information on the judgement. Try and ensure that `reports` or `no reports` are sources of information and not judgements (but see negation section below for the use of `no` in cases like this to modify judgements).
 
-- *Location*: A specific place that you could point to on a globe, ussually proper nouns, but not always. These can be cites, countries, regions, or specific houses.
+- *Location*: A specific place that you could point to on a globe, ussually proper nouns, but not always. These can be cites, countries, regions, or specific houses. When tagging, include articles like `across` and `in` if they are present and contiguous.
 
-- *Time*: A specfic time or date. This helps us track when the reports are talking about past events and when they are talking about current events.
+- *Time*: A specfic time or date. This helps us track when the reports are talking about past events and when they are talking about current events. When tagging, include articles like `during` and `on` if they are present and contiguous.
 
 - *Negation*: There are special words that invert a judgement, these negate a judgement. These words are important to our project and we want to capture as many as we can. `The government did not protect civil liberties` carries a very different judgement as compared to `The government did protect civil liberties`, because of the negation `no`.
 
@@ -96,44 +98,50 @@ To code links, you first need to have the tags/entities coded. When you have the
     ```
 has `politically motivated killings` as the aspect, `committed` as the judgement, and `Security forces` as the                  perpetrator.   It then has a __FromPerpetratorToJudgement__ link (`Security forces`,`committed`) and a                          __FromJudgementToAspect__ link (`committed`,`politically motivated killings`). If a specific person or proper noun is         named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a           victim or a perpetrator.
 
-- If is important to keep judgement words, like `unlawful`, `arbitrary`, `intense` and `severe` in the judgement expressions.
+- If is important to keep judgement words, like `systematic`, `intense` and `severe` in the judgement expressions, unless a particular term in question terms is part of an explicit aspect in the list of aspects noted above (`excessive force`, `unlawful interference with Privacy`, `arbitrary arrest and detention`).
 
-- Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: `Abuses included killing`, `killing` is both the aspect (within physcial integrity rights) and the judgement, they did it, although that is implied. There is a special extent tag for this: JointJudgementAspectExpression.
+- Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: `Abuses included killing`, `killing` is both the aspect (within physcial integrity rights) and the judgement, they did it, although that fact is implied. There is a special extent tag for this: JointJudgementAspectExpression. This should be used sparingly, but it will be necessary.
 
 - Sentences with `of` can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example:
 ```
 Civilian authorities did not maintain effective control of the security forces.
 ```
-One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a common phrase and security forces are groups that are more likely to be perpetrators. The `civilian government` is the perpetrator.
+One could think of the `security forces` as the aspect, then the the judgement is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgement would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a relatively common phrase and security forces are groups that are more likely to be perpetrators. However, this phrase is not in the aspect list, making this more difficult. The `civilian government` is the perpetrator.
 
-- Related to the previous point, keep the phrase `rule of law`, `freedom of speech`, `freedom of expression`, `freedom of movement`, `freedom of assembly`, `freedom of association`, `freedom of press` etc. together. It is a multiword expression.
+- Related to the previous point, keep the phrase `rule of law`, `freedom of speech`, `freedom of expression`, `freedom of movement`, `freedom of assembly`, `freedom of association`, `freedom of press`, `extrajudicial killing`, etc. together. These are multiword expressions that denote specific aspects, and are included in the example aspects list. 
 
-- When there are two prepositions, as in `obstruction of the work of nongovernmental organizations (NGOs)`, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so `the work of nongovernmental organizations (NGOs)` is the aspect and the judgement is `obstruction of`.
+- When there are two prepositions, as in `obstruction of the work of nongovernmental organizations (NGOs)`, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so `the work of nongovernmental organizations (NGOs)` is the aspect and the judgement is `obstruction of`. It helps that this is from the investigations and NGO section.
 
 - Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. Perpetrators are the cause of an effect.
 
-- Conversely, victims are the effected party.
+- Conversely, victims are the effected party. You can be a victim of amnesty, meaning you were granted amnesty.
 
-- Include articles or adjectives in a tag if they would be left dangling ("<The executive>", "the legislature", "severly violated"). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in the previous sentence.
+- Include articles or adjectives in a tag if they would be left dangling ("<The executive>", "the legislature", "during 1998"). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in `severely limited`.
 
-- Code as much as possible. The sentence:
-`In may, rebels crossed from Sudan into the east of the country and attacked` could be mistaken for an EventFact tag, but since it involves physical security, `attacked` is an JointAspectJudgement. In that case, the perpetrator is the rebels, so this is not an EventFact, as the sentence includes a judgement that something happened to influence physical security.
+- When events happen within the year of the report, try and code a relevant judgement if it is provided. The sentence:
+`In may, rebels crossed from Sudan into the east of the country and attacked` could be mistaken for an EventFact tag, but since it involves physical security, `attacked` is an JointAspectJudgement (and `attack` is specifically mentioned in the aspect list. In that case, the perpetrator is the rebels, so this is not an EventFact, as the sentence includes a judgement that something happened to influence physical security.
 
 - Judgements can involve more than one actor. The sentence `one of the main rebel factions signed a peace accord with the government` includes the judgement expression `signed` and the aspect expression `peace accord` since this is related to physical security. The perpetrators in this case are the rebel groups, since they signed, and the government. So there should be Perpetrator tags on those two actors and FromPerpetratortoJudgement links for each of rebel groups and government to the judgement expression `signed`.
 
-- Some aspects always imply a set or group of victims, like `child soldiers`, these victims do not need to be tagged separately. So in the phrase, `the use of child soldiers`, `child soldiers` is the aspect expression and `use of` is the judgement.
+- Some aspects always imply a set or group of victims, like `child soldiers`, these victims do not need to be tagged separately. So in the phrase, `the use of child soldiers`, `child soldiers` is the aspect expression and `use of` is the judgement. Note that `child soldiers` is an aspect in the file.
 
-- The phrasing of `reports` is tricky. A common phrase is `There were reports of` or `There were no reports of`. In these cases, `were reports` or `were no reports of`, if they are the only judgement-like expressions in the sentence, should be coded as the judgements, and then `reports` also tagged as the source of the information. Care needs to be taken when linking the correct parts of these instances.
+- The phrasing of `reports` is tricky. A common phrase is `There were reports of` or `There were no reports of`. In these cases, `were reports` or `were no reports of`, should be coded as sources of information. The only exception to this is if these are the only judgement-like expressions in the sentence and the coding would not make sense without including `reports` as a judgement. This will be rare. More often, the negation in `no` is linked to the separate judgement expression. If `reports` needs to be included in the judgement, then it should also tagged as the source of the information. Care needs to be taken when linking the correct parts of these instances.
 
-- When two actors are mentioned with an `and` then include them as seperate entities, and with their links. If two actors are mentioned with an `or` then they should be joined as one extent, since we do not know which one should be used (`or` does not equal both).
+- In most cases, when two actors are mentioned with an `and` then include them as seperate entities, and with their links. If two actors are mentioned with an `or` then they should be joined as one extent, since we do not know which one should be used (`or` does not equal both).
 
-- You can use discontinuous extents when necessary. For example, when there is one judgement that is split across the beginning and the end of a sentence.
+- You should use discontinuous extents when necessary. For example, when there is one judgement that is split across the beginning and the end of a sentence. We want to code Yoda and the Statement Department consistently.
 
 
 #### Questions for future
 
-- Some sentences have extensive details about an aspect, in particular. Should allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity?
+- Some sentences have extensive details about an aspect, in particular. Should we allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity? It might be that time, location, victim and perpetrator handle this adequately.
 
-- Add link from an Indirect Aspect to an EventFact to resolve coreferene
+- We could add a new link type from an vague entity to another entity to resolve coreference.
 
-- Add `148 children were kidnapped` as example for JointJudgementAspectExpression, ignore `were` in coding for efficiency
+- Add `148 children were kidnapped`, it should be coded as:
+``
+<JudgementExpression>148...were</JudgementExpression>
+<Victim>children</Victim>
+<AspectExpression>kidnapped</AspectExpression>
+``
+with a the two relevant links (FromJudgementToAspect and FromJudgementToVictim).

@@ -1,95 +1,1174 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
-</head>
-<body>
-<h1 id="direction-to-annotate-using-pulsar-rules">Direction to Annotate using PULSAR-rules</h1>
-<h2 id="installation">Installation</h2>
-<ol start="0" style="list-style-type: decimal">
-<li><p>Download <code>mae-2.2.4-fatjar.jar</code>, from https://github.com/keighrim/mae-annotation/releases</p></li>
-<li><p>Open the java interface at the terminal: <code>java -jar mae-2.2.4-fatjar.jar</code></p></li>
+<!DOCTYPE html><html><head><meta charset="utf-8"><style>body {
+  max-width: 980px;
+  border: 1px solid #ddd;
+  outline: 1300px solid #fff;
+  margin: 16px auto;
+}
+
+body .markdown-body
+{
+  padding: 45px;
+}
+
+@font-face {
+  font-family: fontawesome-mini;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+@font-face {
+  font-family: octicons-anchor;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+.markdown-body {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #333333;
+  overflow: hidden;
+  font-family: "Helvetica Neue", Helvetica, "Segoe UI", Arial, freesans, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  word-wrap: break-word;
+}
+
+.markdown-body a {
+  background: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline: 0;
+}
+
+.markdown-body b,
+.markdown-body strong {
+  font-weight: bold;
+}
+
+.markdown-body mark {
+  background: #ff0;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body sub,
+.markdown-body sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+.markdown-body sup {
+  top: -0.5em;
+}
+.markdown-body sub {
+  bottom: -0.25em;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+.markdown-body img {
+  border: 0;
+}
+
+.markdown-body hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+.markdown-body pre {
+  overflow: auto;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+.markdown-body input {
+  color: inherit;
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body html input[disabled] {
+  cursor: default;
+}
+
+.markdown-body input {
+  line-height: normal;
+}
+
+.markdown-body input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body .codehilitetable {
+  border: 0;
+  border-spacing: 0;
+}
+
+.markdown-body .codehilitetable tr {
+  border: 0;
+}
+
+.markdown-body .codehilitetable pre,
+.markdown-body .codehilitetable div.codehilite {
+  margin: 0;
+}
+
+.markdown-body .linenos,
+.markdown-body .code,
+.markdown-body .codehilitetable td {
+  border: 0;
+  padding: 0;
+}
+
+.markdown-body td:not(.linenos) .linenodiv {
+  padding: 0 !important;
+}
+
+.markdown-body .code {
+  width: 100%;
+}
+
+.markdown-body .linenos div pre,
+.markdown-body .linenodiv pre,
+.markdown-body .linenodiv {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-left-radius: 3px;
+  -webkit-border-bottom-left-radius: 3px;
+  -moz-border-radius-topleft: 3px;
+  -moz-border-radius-bottomleft: 3px;
+  border-top-left-radius: 3px;
+  border-bottom-left-radius: 3px;
+}
+
+.markdown-body .code div pre,
+.markdown-body .code div {
+  border: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  -webkit-border-top-right-radius: 3px;
+  -webkit-border-bottom-right-radius: 3px;
+  -moz-border-radius-topright: 3px;
+  -moz-border-radius-bottomright: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+.markdown-body * {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font: 13px Helvetica, arial, freesans, clean, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  line-height: 1.4;
+}
+
+.markdown-body a {
+  color: #4183c4;
+  text-decoration: none;
+}
+
+.markdown-body a:hover,
+.markdown-body a:focus,
+.markdown-body a:active {
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.markdown-body hr:before,
+.markdown-body hr:after {
+  display: table;
+  content: " ";
+}
+
+.markdown-body hr:after {
+  clear: both;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.1;
+}
+
+.markdown-body h1 {
+  font-size: 30px;
+}
+
+.markdown-body h2 {
+  font-size: 21px;
+}
+
+.markdown-body h3 {
+  font-size: 16px;
+}
+
+.markdown-body h4 {
+  font-size: 14px;
+}
+
+.markdown-body h5 {
+  font-size: 12px;
+}
+
+.markdown-body h6 {
+  font-size: 11px;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ul ul ol,
+.markdown-body ul ol ol,
+.markdown-body ol ul ol,
+.markdown-body ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre,
+.markdown-body samp {
+  font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #e7e7e7;
+  background-image: -moz-linear-gradient(#fefefe, #e7e7e7);
+  background-image: -webkit-linear-gradient(#fefefe, #e7e7e7);
+  background-image: linear-gradient(#fefefe, #e7e7e7);
+  background-repeat: repeat-x;
+  border-radius: 2px;
+  border: 1px solid #cfcfcf;
+  color: #000;
+  padding: 3px 5px;
+  line-height: 10px;
+  font: 11px Consolas, "Liberation Mono", Menlo, Courier, monospace;
+  display: inline-block;
+}
+
+.markdown-body>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+.markdown-body .headeranchor-link {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  display: block;
+  padding-right: 6px;
+  padding-left: 30px;
+  margin-left: -30px;
+}
+
+.markdown-body .headeranchor-link:focus {
+  outline: none;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  position: relative;
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.markdown-body h1 .headeranchor,
+.markdown-body h2 .headeranchor,
+.markdown-body h3 .headeranchor,
+.markdown-body h4 .headeranchor,
+.markdown-body h5 .headeranchor,
+.markdown-body h6 .headeranchor {
+  display: none;
+  color: #000;
+  vertical-align: middle;
+}
+
+.markdown-body h1:hover .headeranchor-link,
+.markdown-body h2:hover .headeranchor-link,
+.markdown-body h3:hover .headeranchor-link,
+.markdown-body h4:hover .headeranchor-link,
+.markdown-body h5:hover .headeranchor-link,
+.markdown-body h6:hover .headeranchor-link {
+  height: 1em;
+  padding-left: 8px;
+  margin-left: -30px;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .headeranchor-link .headeranchor,
+.markdown-body h2:hover .headeranchor-link .headeranchor,
+.markdown-body h3:hover .headeranchor-link .headeranchor,
+.markdown-body h4:hover .headeranchor-link .headeranchor,
+.markdown-body h5:hover .headeranchor-link .headeranchor,
+.markdown-body h6:hover .headeranchor-link .headeranchor {
+  display: inline-block;
+}
+
+.markdown-body h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+.markdown-body h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+.markdown-body h4 {
+  font-size: 1.25em;
+}
+
+.markdown-body h5 {
+  font-size: 1em;
+}
+
+.markdown-body h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+.markdown-body p,
+.markdown-body blockquote,
+.markdown-body ul,
+.markdown-body ol,
+.markdown-body dl,
+.markdown-body table,
+.markdown-body pre,
+.markdown-body .admonition {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.markdown-body hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+.markdown-body ul,
+.markdown-body ol {
+  padding-left: 2em;
+}
+
+.markdown-body ul ul,
+.markdown-body ul ol,
+.markdown-body ol ol,
+.markdown-body ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+.markdown-body dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+.markdown-body blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+.markdown-body table th {
+  font-weight: bold;
+}
+
+.markdown-body table th,
+.markdown-body table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+.markdown-body img {
+  max-width: 100%;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.markdown-body code,
+.markdown-body samp {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+.markdown-body code:before,
+.markdown-body code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+.markdown-body pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+.markdown-body .codehilite {
+  margin-bottom: 16px;
+}
+
+.markdown-body .codehilite pre,
+.markdown-body pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+.markdown-body .codehilite pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+.markdown-body pre code:before,
+.markdown-body pre code:after {
+  content: normal;
+}
+
+/* Admonition */
+.markdown-body .admonition {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  position: relative;
+  border-radius: 3px;
+  border: 1px solid #e0e0e0;
+  border-left: 6px solid #333;
+  padding: 10px 10px 10px 30px;
+}
+
+.markdown-body .admonition table {
+  color: #333;
+}
+
+.markdown-body .admonition p {
+  padding: 0;
+}
+
+.markdown-body .admonition-title {
+  font-weight: bold;
+  margin: 0;
+}
+
+.markdown-body .admonition>.admonition-title {
+  color: #333;
+}
+
+.markdown-body .attention>.admonition-title {
+  color: #a6d796;
+}
+
+.markdown-body .caution>.admonition-title {
+  color: #d7a796;
+}
+
+.markdown-body .hint>.admonition-title {
+  color: #96c6d7;
+}
+
+.markdown-body .danger>.admonition-title {
+  color: #c25f77;
+}
+
+.markdown-body .question>.admonition-title {
+  color: #96a6d7;
+}
+
+.markdown-body .note>.admonition-title {
+  color: #d7c896;
+}
+
+.markdown-body .admonition:before,
+.markdown-body .attention:before,
+.markdown-body .caution:before,
+.markdown-body .hint:before,
+.markdown-body .danger:before,
+.markdown-body .question:before,
+.markdown-body .note:before {
+  font: normal normal 16px fontawesome-mini;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  line-height: 1.5;
+  color: #333;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.markdown-body .admonition:before {
+  content: "\f056\00a0";
+  color: 333;
+}
+
+.markdown-body .attention:before {
+  content: "\f058\00a0";
+  color: #a6d796;
+}
+
+.markdown-body .caution:before {
+  content: "\f06a\00a0";
+  color: #d7a796;
+}
+
+.markdown-body .hint:before {
+  content: "\f05a\00a0";
+  color: #96c6d7;
+}
+
+.markdown-body .danger:before {
+  content: "\f057\00a0";
+  color: #c25f77;
+}
+
+.markdown-body .question:before {
+  content: "\f059\00a0";
+  color: #96a6d7;
+}
+
+.markdown-body .note:before {
+  content: "\f040\00a0";
+  color: #d7c896;
+}
+
+.markdown-body .admonition::after {
+  content: normal;
+}
+
+.markdown-body .attention {
+  border-left: 6px solid #a6d796;
+}
+
+.markdown-body .caution {
+  border-left: 6px solid #d7a796;
+}
+
+.markdown-body .hint {
+  border-left: 6px solid #96c6d7;
+}
+
+.markdown-body .danger {
+  border-left: 6px solid #c25f77;
+}
+
+.markdown-body .question {
+  border-left: 6px solid #96a6d7;
+}
+
+.markdown-body .note {
+  border-left: 6px solid #d7c896;
+}
+
+.markdown-body .admonition>*:first-child {
+  margin-top: 0 !important;
+}
+
+.markdown-body .admonition>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+/* progress bar*/
+.markdown-body .progress {
+  display: block;
+  width: 300px;
+  margin: 10px 0;
+  height: 24px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #ededed;
+  position: relative;
+  box-shadow: inset -1px 1px 3px rgba(0, 0, 0, .1);
+}
+
+.markdown-body .progress-label {
+  position: absolute;
+  text-align: center;
+  font-weight: bold;
+  width: 100%; margin: 0;
+  line-height: 24px;
+  color: #333;
+  text-shadow: 1px 1px 0 #fefefe, -1px -1px 0 #fefefe, -1px 1px 0 #fefefe, 1px -1px 0 #fefefe, 0 1px 0 #fefefe, 0 -1px 0 #fefefe, 1px 0 0 #fefefe, -1px 0 0 #fefefe, 1px 1px 2px #000;
+  -webkit-font-smoothing: antialiased !important;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.markdown-body .progress-bar {
+  height: 24px;
+  float: left;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  background-color: #96c6d7;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, .5), inset 0 -1px 0 rgba(0, 0, 0, .1);
+  background-size: 30px 30px;
+  background-image: -webkit-linear-gradient(
+    135deg, rgba(255, 255, 255, .4) 27%,
+    transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%,
+    transparent 77%, transparent
+  );
+  background-image: -moz-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -ms-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: -o-linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+  background-image: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, .4) 27%, transparent 27%,
+    transparent 52%, rgba(255, 255, 255, .4) 52%,
+    rgba(255, 255, 255, .4) 77%, transparent 77%,
+    transparent
+  );
+}
+
+.markdown-body .progress-100plus .progress-bar {
+  background-color: #a6d796;
+}
+
+.markdown-body .progress-80plus .progress-bar {
+  background-color: #c6d796;
+}
+
+.markdown-body .progress-60plus .progress-bar {
+  background-color: #d7c896;
+}
+
+.markdown-body .progress-40plus .progress-bar {
+  background-color: #d7a796;
+}
+
+.markdown-body .progress-20plus .progress-bar {
+  background-color: #d796a6;
+}
+
+.markdown-body .progress-0plus .progress-bar {
+  background-color: #c25f77;
+}
+
+.markdown-body .candystripe-animate .progress-bar{
+  -webkit-animation: animate-stripes 3s linear infinite;
+  -moz-animation: animate-stripes 3s linear infinite;
+  animation: animate-stripes 3s linear infinite;
+}
+
+@-webkit-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+
+  100% {
+    background-position: 60px 0;
+  }
+}
+
+.markdown-body .gloss .progress-bar {
+  box-shadow:
+    inset 0 4px 12px rgba(255, 255, 255, .7),
+    inset 0 -12px 0 rgba(0, 0, 0, .05);
+}
+
+/* Multimarkdown Critic Blocks */
+.markdown-body .critic_mark {
+  background: #ff0;
+}
+
+.markdown-body .critic_delete {
+  color: #c82829;
+  text-decoration: line-through;
+}
+
+.markdown-body .critic_insert {
+  color: #718c00 ;
+  text-decoration: underline;
+}
+
+.markdown-body .critic_comment {
+  color: #8e908c;
+  font-style: italic;
+}
+
+.markdown-body .headeranchor {
+  font: normal normal 16px octicons-anchor;
+  line-height: 1;
+  display: inline-block;
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.headeranchor:before {
+  content: '\f05c';
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 4px 0.25em -20px;
+  vertical-align: middle;
+}
+
+/* Media */
+@media only screen and (min-width: 480px) {
+  .markdown-body {
+    font-size:14px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .markdown-body {
+    font-size:16px;
+  }
+}
+
+@media print {
+  .markdown-body * {
+    background: transparent !important;
+    color: black !important;
+    filter:none !important;
+    -ms-filter: none !important;
+  }
+
+  .markdown-body {
+    font-size:12pt;
+    max-width:100%;
+    outline:none;
+    border: 0;
+  }
+
+  .markdown-body a,
+  .markdown-body a:visited {
+    text-decoration: underline;
+  }
+
+  .markdown-body .headeranchor-link {
+    display: none;
+  }
+
+  .markdown-body a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  .markdown-body abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  .markdown-body .ir a:after,
+  .markdown-body a[href^="javascript:"]:after,
+  .markdown-body a[href^="#"]:after {
+    content: "";
+  }
+
+  .markdown-body pre {
+    white-space: pre;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+  }
+
+  .markdown-body pre,
+  .markdown-body blockquote {
+    border: 1px solid #999;
+    padding-right: 1em;
+    page-break-inside: avoid;
+  }
+
+  .markdown-body .progress,
+  .markdown-body .progress-bar {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .markdown-body .progress {
+    border: 1px solid #ddd;
+  }
+
+  .markdown-body .progress-bar {
+    height: 22px;
+    border-right: 1px solid #ddd;
+  }
+
+  .markdown-body tr,
+  .markdown-body img {
+    page-break-inside: avoid;
+  }
+
+  .markdown-body img {
+    max-width: 100% !important;
+  }
+
+  .markdown-body p,
+  .markdown-body h2,
+  .markdown-body h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  .markdown-body h2,
+  .markdown-body h3 {
+    page-break-after: avoid;
+  }
+}
+</style><title>PULSARannotationDirections</title></head><body><article class="markdown-body"><h1 id="direction-to-annotate-using-pulsar-rules"><a name="user-content-direction-to-annotate-using-pulsar-rules" href="#direction-to-annotate-using-pulsar-rules" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Direction to Annotate using PULSAR-rules</h1>
+<h2 id="installation"><a name="user-content-installation" href="#installation" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Installation</h2>
+<ol>
+<li>
+<p>Download <code>mae-2.2.4-fatjar.jar</code>, from <a href="https://github.com/keighrim/mae-annotation/releases">https://github.com/keighrim/mae-annotation/releases</a></p>
+</li>
+<li>
+<p>Open the java interface at the terminal:<br />
+<code>java -jar mae-2.2.4-fatjar.jar</code></p>
+</li>
 </ol>
 <p>If you get an error you may need to install java and the java jdk. Please install Java version &gt;8. These are available <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a></p>
-<ol start="2" style="list-style-type: decimal">
-<li><p>If mae opened just fine, then you need to open the document-type definition file by going to <strong>File</strong> menu (top left), <img src="Images/ScreenShot2.png" alt="File menu" /> then select <strong>New Task Definition</strong>, and find <code>PULSAR.dtd</code>. That should load the possible annotation types, and there should now be different colors and names towards the bottom of the screen, like so: <img src="Images/ScreenShot3.png" alt="After dtd is loaded" /></p></li>
-<li><p>Then open the file to annotate, by going to the <strong>File</strong> menu again, selecting <strong>Open Document</strong> and selecting your next document. <img src="Images/ScreenShot4.png" alt="MAE screen" /> This is an example of what the resulting screen should look like, but you will have a different document. <img src="Images/ScreenShot5.png" alt="File menu" />!</p></li>
+<ol>
+<li>
+<p>If mae opened just fine, then you need to open the document-type definition file by going to <strong>File</strong> menu (top left),<br />
+<img alt="File menu" src="/Users/michaelcolaresi/Dropbox/AnnotationProject/Images/ScreenShot2.png" /><br />
+then select <strong>New Task Definition</strong>, and find <code>PULSAR.dtd</code>. That should load the possible annotation types, and there should now be different colors and names towards the bottom of the screen, like so:<br />
+<img alt="After dtd is loaded" src="/Users/michaelcolaresi/Dropbox/AnnotationProject/Images/ScreenShot3.png" /></p>
+</li>
+<li>
+<p>Then open the file to annotate, by going to the <strong>File</strong> menu again, selecting <strong>Open Document</strong> and selecting your next document.<br />
+<img alt="MAE screen" src="/Users/michaelcolaresi/Dropbox/AnnotationProject/Images/ScreenShot4.png" /><br />
+This is an example of what the resulting screen should look like, but you will have a different document.<br />
+<img alt="File menu" src="/Users/michaelcolaresi/Dropbox/AnnotationProject/Images/ScreenShot5.png" />!</p>
+</li>
 </ol>
-<h2 id="goals">Goals</h2>
+<h2 id="goals"><a name="user-content-goals" href="#goals" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Goals</h2>
 <p>The goals are to mark up human rights reports so that we can identify what aspects of human rights are being judged over time, as well as who are the perpetrators, victims and sources of information are. We have special tags for negation too, as that reverses a judgement.</p>
-<h2 id="definitions">Definitions</h2>
+<h2 id="definitions"><a name="user-content-definitions" href="#definitions" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Definitions</h2>
 <ul>
-<li><em>Aspects of human rights</em>: Rights are moral or legal rules. They are abstract in the sense that a specific person, place or thing is not a right. Privacy is a right. Physical integrity, meaning not having someone threaten, torture or attack you, is a right. The aspects are conceptually separate from the judgements offered on them (See below). Aspects are often noun phrases, but not propoer nouns. There are seven broad classes of rights:
-<ul>
+<li><em>Aspects of human rights</em>: Rights are moral or legal rules. They are abstract in the sense that a specific person, place or thing is not a right. Privacy is a right. Physical integrity, meaning not having someone threaten, torture or attack you, is a right. The aspects are conceptually separate from the judgements offered on them (See below). Aspects are often noun phrases, but not propoer nouns. There are seven broad classes of rights:<ul>
 <li>Physical integrity rights</li>
 <li>Civil liberties</li>
 <li>Political rights</li>
 <li>Government corruption and transparency</li>
 <li>Discrimination, societal abuse and Trafficing in persons</li>
-<li>Worker's rights</li>
+<li>Worker&rsquo;s rights</li>
 <li>Government attitude towards international and nongovernmental investigations of alleged violations of rights</li>
-</ul></li>
-<li><p><em>Judgement of protection or violation of an aspect of human rights</em>: These reports provide information about whether a country, in a given year, has protected or violated specifiv types of rights; and provides information and events related to those claims. A judgement tells us either directly or indirectly whether a right has been violated protected, or possibly that there is no information about this. One way to think about whether a phrase is an aspect of human rights or a judgement on an aspect is to think about whether you could attach multiple different judgements to that expression. For example, in the phrase: <code>Security forces committed widespread torture</code>, the aspect is torture, a form of physical integrity right. We could imagine another sentence that stated, <code>There were no reports that the Security forces used torture</code>, same aspect, different judgement. Judgements are often verbs, adverbs or adjectives.</p></li>
-<li><p><em>Perpetrator</em>: These are the people or groups, often proper nouns, who have been the actors in the judged actions. Perpetrators ussually are identified in these documents as having done negative things, but that is not always the case. A group can perpetrate a peace agreement, for example.</p></li>
-<li><p><em>Victim</em>: These are people or groups, often proper nouns, who have been acted upon in the judged actions. Victims in these documents are often the ones suffering from the abuse of these rights. However, people can be acted upon in a postive sense (for them), as they could be given immunity by the government.</p></li>
-<li><p><em>Source of information on the judgement</em>: While we know the author the reports (eg the US State Department or Amnesty International), often they are writing about others. The source of the judgement is often media reports, other NGOs. They can also be the opposition or even the government. The absence of reports is itself a source. So in the phrase <code>There were no reports that the Security forces used torture</code>, <code>no reports</code> is the source of the information on the judgement.</p></li>
-<li><p><em>Location</em>: A specific place that you could point to on a globe, ussually proper nouns, but not always. These can be cites, countries, regions, or specific houses.</p></li>
-<li><p><em>Time</em>: A specfic time or date. This helps us track when the reports are talking about past events and when they are talking about current events.</p></li>
-<li><p><em>Negation</em>: There are special words that invert a judgement, these negate a judgement. These words are important to our project and we want to capture as many as we can. <code>The government did not protect civil liberties</code> carries a very different judgement as compared to <code>The government did protect civil liberties</code>, because of the negation <code>no</code>.</p></li>
-<li><p><em>Phrase type</em>: More generally, there are many phrases or whole sentences that do not offer a clear judgement. In that case, we are not interested in those and they can be tagged as either an old event or fact, a current event or fact, or as ambiguous. For example <code>10 years ago, the President was elected.</code> is an old fact/event.</p></li>
 </ul>
-<h3 id="tagging-chucks-of-contiguous-or-discontinuous-text-as-entities">Tagging Chucks of Contiguous or Discontinuous Text as Entities</h3>
+</li>
+</ul>
+<p><em>We also have a list of over 100 aspects in this <a href="/Users/michaelcolaresi/Dropbox/AnnotationProject/Aspect_Categories_with_Natural_Language_Interpretation.csv">file</a>. When in doubt you can search this file to see if a phrase or something close comes up. If it does, then this should be an aspect.</em> As one example, <code>excessive force</code> is an aspect in this file. </p>
+<ul>
+<li>
+<p><em>Judgement of protection or violation of an aspect of human rights</em>: These reports provide information about whether a country, in a given year, has protected or violated specifiv types of rights; and provides information and events related to those claims. A judgement tells us either directly or indirectly whether a right has been violated protected, or possibly that there is no information about this. One way to think about whether a phrase is an aspect of human rights or a judgement on an aspect is to think about whether you could attach multiple different judgements to that expression. For example, in the phrase: <code>Security forces committed widespread torture</code>, the aspect is torture, a form of physical integrity right. We could imagine another sentence that stated, <code>There were no reports that the Security forces used torture</code>, same aspect, different judgement. Judgements are often verbs, adverbs or adjectives.</p>
+</li>
+<li>
+<p><em>Perpetrator</em>: These are the people or groups, often proper nouns, who have been the actors in the judged actions. Perpetrators ussually are identified in these documents as having done negative things, but that is not always the case. A group can perpetrate a peace agreement, for example.</p>
+</li>
+<li>
+<p><em>Victim</em>: These are people or groups, often proper nouns, who have been acted upon in the judged actions. Victims in these documents are often the ones suffering from the abuse of these rights. However, people can be acted upon in a postive sense (for them), as they could be given immunity by the government.</p>
+</li>
+<li>
+<p><em>Source of information on the judgement</em>: While we know the author the reports (eg the US State Department or Amnesty International), often they are writing about others. The source of the judgement is often media reports, other NGOs. They can also be the opposition or even the government. The absence of reports is itself a source. So in the phrase <code>There were no reports that the Security forces used torture</code>, <code>no reports</code> is the source of the information on the judgement. Try and ensure that <code>reports</code> or <code>no reports</code> are sources of information and not judgements (but see negation section below for the use of <code>no</code> in cases like this to modify judgements).</p>
+</li>
+<li>
+<p><em>Location</em>: A specific place that you could point to on a globe, ussually proper nouns, but not always. These can be cites, countries, regions, or specific houses. When tagging, include articles like <code>across</code> and <code>in</code> if they are present and contiguous.</p>
+</li>
+<li>
+<p><em>Time</em>: A specfic time or date. This helps us track when the reports are talking about past events and when they are talking about current events. When tagging, include articles like <code>during</code> and <code>on</code> if they are present and contiguous.</p>
+</li>
+<li>
+<p><em>Negation</em>: There are special words that invert a judgement, these negate a judgement. These words are important to our project and we want to capture as many as we can. <code>The government did not protect civil liberties</code> carries a very different judgement as compared to <code>The government did protect civil liberties</code>, because of the negation <code>no</code>.</p>
+</li>
+<li>
+<p><em>Phrase type</em>: More generally, there are many phrases or whole sentences that do not offer a clear judgement. In that case, we are not interested in those and they can be tagged as either an old event or fact, a current event or fact, or as ambiguous. For example <code>10 years ago, the President was elected.</code> is an old fact/event.</p>
+</li>
+</ul>
+<h3 id="tagging-chucks-of-contiguous-or-discontinuous-text-as-entities"><a name="user-content-tagging-chucks-of-contiguous-or-discontinuous-text-as-entities" href="#tagging-chucks-of-contiguous-or-discontinuous-text-as-entities" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tagging Chucks of Contiguous or Discontinuous Text as Entities</h3>
 <p>For our purposes text can tell us about any of the previously defined concepts. We have designed <em>tags</em>, also known as <em>entities</em>, for you to use to denote what semantic role a phrase or word is playing in a sentence. These are defined in the PULSAR.dtd file. The point of the MAE software is to allow you to efficiently annotate the text, marking the language in documents with the appropriate tags.</p>
 <p>To make a tag, when in normal mode (see next paragraph), simply select the text and then control-click on that highlighted text. Then select the extent tag that is appropriate.</p>
 <p>Importantly, tags can be continuous, where you are just highlight from left to right or right to left, contiguous characters and/or white space; or discontinuous, where there is a gap between the words that are part of the same tag. For example, the phrase <code>Extreme surveillance by the government was widespread.</code> The judgement here is discontinuous because it includes <code>extreme</code> and <code>was widespread</code>. In MAE there is a mode for discontinous span selection. Just select <strong>Mode</strong>, then <strong>Switch to discontinous span selection</strong>. Then just do command-e to switch back to regular mode, or click on <strong>Mode</strong> again and then <strong>Return to normal mode</strong>.</p>
 <p>Everytime you tag a section of text, it creates meta data on the tag type, and where the span begins and ends (with multiple values if the span is discontinous). You can see some of this near the bottom of the screen.</p>
 <p>To delete a tag. Control-click on it.</p>
 <p><em>One note of warning: it is common when highlighting text to miss the first or last letter of a span, please try and be careful with this.</em></p>
-<h3 id="tagging-links-between-entities">Tagging Links Between Entities</h3>
+<h3 id="tagging-links-between-entities"><a name="user-content-tagging-links-between-entities" href="#tagging-links-between-entities" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Tagging Links Between Entities</h3>
 <p>In addition, we want to identify connections between these tagged chunks of text. Specifically, we want to be able to identify links:</p>
-<ol style="list-style-type: decimal">
-<li>between a judgement and the aspect of human right the judgement is offered on</li>
-<li>between the perpetrator judged and the judgement of their action</li>
-<li>between the victim of a judged action and the judgement</li>
-<li>between the souce of information for a judgement and the judgement</li>
-<li>between negation and the what is being negated, particularly the judgement</li>
-<li>between a location and what is located there</li>
-<li>between a time what took place at that time</li>
-</ol>
+<p>1) between a judgement and the aspect of human right the judgement is offered on<br />
+2) between the perpetrator judged and the judgement of their action<br />
+3) between the victim of a judged action and the judgement<br />
+4) between the souce of information for a judgement and the judgement<br />
+5) between negation and the what is being negated, particularly the judgement<br />
+6) between a location and what is located there<br />
+7) between a time what took place at that time</p>
 <p>These are each types of relations are <em>links</em>.</p>
-<p>To code links, you first need to have the tags/entities coded. When you have the entities all coded for a sentence, and you are ready to create links, select <strong>Mode</strong>, and then <strong>Switch to argument selection mode</strong>, to create links you are selecting the arguments. You can also **Switch to argument selection mode&quot; with the command-2 shortcut. In this mode, select anywhere in the tag for the first part of the link and click, then select anywhere in the tag for the second part of the link and click. You should see at least two discontinous highlighted sections. Control-click on one of these, and select the appropriate link. A dialogue will pop up that will let you choose the appropriate link type.</p>
-<h3 id="examples">Examples</h3>
-<h4 id="some-specific-cases">Some Specific cases</h4>
+<p>To code links, you first need to have the tags/entities coded. When you have the entities all coded for a sentence, and you are ready to create links, select <strong>Mode</strong>, and then <strong>Switch to argument selection mode</strong>, to create links you are selecting the arguments. You can also **Switch to argument selection mode&rdquo; with the command-2 shortcut. In this mode, select anywhere in the tag for the first part of the link and click, then select anywhere in the tag for the second part of the link and click. You should see at least two discontinous highlighted sections. Control-click on one of these, and select the appropriate link. A dialogue will pop up that will let you choose the appropriate link type.</p>
+<h3 id="examples"><a name="user-content-examples" href="#examples" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Examples</h3>
+<h4 id="some-specific-cases"><a name="user-content-some-specific-cases" href="#some-specific-cases" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Some Specific cases</h4>
 <ul>
-<li><p>Judgements are often verb phrases and aspects (non-proper) noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence:</p>
-<pre><code>Security forces committed politically motivated killings.</code></pre>
-<p>has <code>politically motivated killings</code> as the aspect, <code>committed</code> as the judgement, and <code>Security forces</code> as the perpetrator. It then has a <strong>FromPerpetratorToJudgement</strong> link (<code>Security forces</code>,<code>committed</code>) and a <strong>FromJudgementToAspect</strong> link (<code>committed</code>,<code>politically motivated killings</code>). If a specific person or proper noun is named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a victim or a perpetrator.</p></li>
-<li><p>If is important to keep judgement words, like <code>unlawful</code>, <code>arbitrary</code>, <code>intense</code> and <code>severe</code> in the judgement expressions.</p></li>
-<li><p>Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: <code>Abuses included killing</code>, <code>killing</code> is both the aspect (within physcial integrity rights) and the judgement, they did it, although that is implied. There is a special extent tag for this: JointJudgementAspectExpression.</p></li>
-<li><p>Sentences with <code>of</code> can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example:</p>
-<pre><code>Civilian authorities did not maintain effective control of the security forces.</code></pre>
-<p>One could think of the <code>security forces</code> as the aspect, then the the judgement is <code>did not maintain effective control of</code>. Alternatively, one could think of <code>control of the security forces</code> as the aspect and then the judgement would be <code>did not maintain effective</code>. In this case, the second coding is slightly preferable, but only because <code>control of the security forces</code> is a common phrase and security forces are groups that are more likely to be perpetrators. The <code>civilian government</code> is the perpetrator.</p></li>
-<li><p>Related to the previous point, keep the phrase <code>rule of law</code>, <code>freedom of speech</code>, <code>freedom of expression</code>, <code>freedom of movement</code>, <code>freedom of assembly</code>, <code>freedom of association</code>, <code>freedom of press</code> etc. together. It is a multiword expression.</p></li>
-<li><p>When there are two prepositions, as in <code>obstruction of the work of nongovernmental organizations (NGOs)</code>, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so <code>the work of nongovernmental organizations (NGOs)</code> is the aspect and the judgement is <code>obstruction of</code>.</p></li>
-<li><p>Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. Perpetrators are the cause of an effect.</p></li>
-<li><p>Conversely, victims are the effected party.</p></li>
-<li><p>Include articles or adjectives in a tag if they would be left dangling (&quot;<The executive>&quot;, &quot;the legislature&quot;, &quot;severly violated&quot;). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in the previous sentence.</p></li>
-<li><p>Code as much as possible. The sentence: <code>In may, rebels crossed from Sudan into the east of the country and attacked</code> could be mistaken for an EventFact tag, but since it involves physical security, <code>attacked</code> is an JointAspectJudgement. In that case, the perpetrator is the rebels, so this is not an EventFact, as the sentence includes a judgement that something happened to influence physical security.</p></li>
-<li><p>Judgements can involve more than one actor. The sentence <code>one of the main rebel factions signed a peace accord with the government</code> includes the judgement expression <code>signed</code> and the aspect expression <code>peace accord</code> since this is related to physical security. The perpetrators in this case are the rebel groups, since they signed, and the government. So there should be Perpetrator tags on those two actors and FromPerpetratortoJudgement links for each of rebel groups and government to the judgement expression <code>signed</code>.</p></li>
-<li><p>Some aspects always imply a set or group of victims, like <code>child soldiers</code>, these victims do not need to be tagged separately. So in the phrase, <code>the use of child soldiers</code>, <code>child soldiers</code> is the aspect expression and <code>use of</code> is the judgement.</p></li>
-<li><p>The phrasing of <code>reports</code> is tricky. A common phrase is <code>There were reports of</code> or <code>There were no reports of</code>. In these cases, <code>were reports</code> or <code>were no reports of</code>, if they are the only judgement-like expressions in the sentence, should be coded as the judgements, and then <code>reports</code> also tagged as the source of the information. Care needs to be taken when linking the correct parts of these instances.</p></li>
-<li><p>When two actors are mentioned with an <code>and</code> then include them as seperate entities, and with their links. If two actors are mentioned with an <code>or</code> then they should be joined as one extent, since we do not know which one should be used (<code>or</code> does not equal both).</p></li>
-<li><p>You can use discontinuous extents when necessary. For example, when there is one judgement that is split across the beginning and the end of a sentence.</p></li>
+<li>
+<p>Judgements are often verb phrases and aspects (non-proper) noun phrases that include human rights terms, and perpetrators or victims are noun phrases with people as the root of the terms. For example the sentence:<br />
+    <pre><code>Security forces committed politically motivated killings.
+</code></pre><br />
+has <code>politically motivated killings</code> as the aspect, <code>committed</code> as the judgement, and <code>Security forces</code> as the                  perpetrator.   It then has a <strong>FromPerpetratorToJudgement</strong> link (<code>Security forces</code>,<code>committed</code>) and a                          <strong>FromJudgementToAspect</strong> link (<code>committed</code>,<code>politically motivated killings</code>). If a specific person or proper noun is         named, that is not an abstract aspect of human rights that is being violated or protected, but instead is usually a           victim or a perpetrator.</p>
+</li>
+<li>
+<p>If is important to keep judgement words, like <code>systematic</code>, <code>intense</code> and <code>severe</code> in the judgement expressions, unless a particular term in question terms is part of an explicit aspect in the list of aspects noted above (<code>excessive force</code>, <code>unlawful interference with Privacy</code>, <code>arbitrary arrest and detention</code>).</p>
+</li>
+<li>
+<p>Some expressions are both an aspect and a judgement at once in a sentence. In the phrase: <code>Abuses included killing</code>, <code>killing</code> is both the aspect (within physcial integrity rights) and the judgement, they did it, although that fact is implied. There is a special extent tag for this: JointJudgementAspectExpression. This should be used sparingly, but it will be necessary.</p>
+</li>
+<li>
+<p>Sentences with <code>of</code> can be confusing because the judgement and aspect are often connected in an ambiguous way. In this example:<br />
+<pre><code>Civilian authorities did not maintain effective control of the security forces.
+</code></pre><br />
+One could think of the <code>security forces</code> as the aspect, then the the judgement is <code>did not maintain effective control of</code>.  Alternatively, one could think of <code>control of the security forces</code> as the aspect and then the judgement would be <code>did not maintain effective</code>. In this case, the second coding is slightly preferable, but only because <code>control of the security forces</code> is a relatively common phrase and security forces are groups that are more likely to be perpetrators. However, this phrase is not in the aspect list, making this more difficult. The <code>civilian government</code> is the perpetrator.</p>
+</li>
+<li>
+<p>Related to the previous point, keep the phrase <code>rule of law</code>, <code>freedom of speech</code>, <code>freedom of expression</code>, <code>freedom of movement</code>, <code>freedom of assembly</code>, <code>freedom of association</code>, <code>freedom of press</code>, <code>extrajudicial killing</code>, etc. together. These are multiword expressions that denote specific aspects, and are included in the example aspects list. </p>
+</li>
+<li>
+<p>When there are two prepositions, as in <code>obstruction of the work of nongovernmental organizations (NGOs)</code>, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so <code>the work of nongovernmental organizations (NGOs)</code> is the aspect and the judgement is <code>obstruction of</code>. It helps that this is from the investigations and NGO section.</p>
+</li>
+<li>
+<p>Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. Perpetrators are the cause of an effect.</p>
+</li>
+<li>
+<p>Conversely, victims are the effected party. You can be a victim of amnesty, meaning you were granted amnesty.</p>
+</li>
+<li>
+<p>Include articles or adjectives in a tag if they would be left dangling (&ldquo;<The executive>&ldquo;, &ldquo;the legislature&rdquo;, &ldquo;during 1998&rdquo;). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in <code>severely limited</code>.</p>
+</li>
+<li>
+<p>When events happen within the year of the report, try and code a relevant judgement if it is provided. The sentence:<br />
+<code>In may, rebels crossed from Sudan into the east of the country and attacked</code> could be mistaken for an EventFact tag, but since it involves physical security, <code>attacked</code> is an JointAspectJudgement (and <code>attack</code> is specifically mentioned in the aspect list. In that case, the perpetrator is the rebels, so this is not an EventFact, as the sentence includes a judgement that something happened to influence physical security.</p>
+</li>
+<li>
+<p>Judgements can involve more than one actor. The sentence <code>one of the main rebel factions signed a peace accord with the government</code> includes the judgement expression <code>signed</code> and the aspect expression <code>peace accord</code> since this is related to physical security. The perpetrators in this case are the rebel groups, since they signed, and the government. So there should be Perpetrator tags on those two actors and FromPerpetratortoJudgement links for each of rebel groups and government to the judgement expression <code>signed</code>.</p>
+</li>
+<li>
+<p>Some aspects always imply a set or group of victims, like <code>child soldiers</code>, these victims do not need to be tagged separately. So in the phrase, <code>the use of child soldiers</code>, <code>child soldiers</code> is the aspect expression and <code>use of</code> is the judgement. Note that <code>child soldiers</code> is an aspect in the file.</p>
+</li>
+<li>
+<p>The phrasing of <code>reports</code> is tricky. A common phrase is <code>There were reports of</code> or <code>There were no reports of</code>. In these cases, <code>were reports</code> or <code>were no reports of</code>, should be coded as sources of information. The only exception to this is if these are the only judgement-like expressions in the sentence and the coding would not make sense without including <code>reports</code> as a judgement. This will be rare. More often, the negation in <code>no</code> is linked to the separate judgement expression. If <code>reports</code> needs to be included in the judgement, then it should also tagged as the source of the information. Care needs to be taken when linking the correct parts of these instances.</p>
+</li>
+<li>
+<p>In most cases, when two actors are mentioned with an <code>and</code> then include them as seperate entities, and with their links. If two actors are mentioned with an <code>or</code> then they should be joined as one extent, since we do not know which one should be used (<code>or</code> does not equal both).</p>
+</li>
+<li>
+<p>You should use discontinuous extents when necessary. For example, when there is one judgement that is split across the beginning and the end of a sentence. We want to code Yoda and the Statement Department consistently.</p>
+</li>
 </ul>
-<h4 id="questions-for-future">Questions for future</h4>
+<h4 id="questions-for-future"><a name="user-content-questions-for-future" href="#questions-for-future" class="headeranchor-link" aria-hidden="true"><span class="headeranchor"></span></a>Questions for future</h4>
 <ul>
-<li><p>Some sentences have extensive details about an aspect, in particular. Should allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity?</p></li>
-<li><p>Add link from an Indirect Aspect to an EventFact to resolve coreferene</p></li>
-<li><p>Add <code>148 children were kidnapped</code> as example for JointJudgementAspectExpression, ignore <code>were</code> in coding for efficiency</p></li>
-</ul>
-</body>
-</html>
+<li>
+<p>Some sentences have extensive details about an aspect, in particular. Should we allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity? It might be that time, location, victim and perpetrator handle this adequately.</p>
+</li>
+<li>
+<p>We could add a new link type from an vague entity to another entity to resolve coreference.</p>
+</li>
+<li>
+<p>Add <code>148 children were kidnapped</code>, it should be coded as:<br />
+<code>&lt;JudgementExpression&gt;148...were&lt;/JudgementExpression&gt;
+&lt;Victim&gt;children&lt;/Victim&gt;
+&lt;AspectExpression&gt;kidnapped&lt;/AspectExpression&gt;</code><br />
+with a the two relevant links (FromJudgementToAspect and FromJudgementToVictim).</p>
+</li>
+</ul></article></body></html>
