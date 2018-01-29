@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PULSARv2.2>
+<TEXT><![CDATA[Rape, including of female refugees, was a problem.
+
+There were no government restrictions on academic freedom or cultural events.
+
+Individuals who publicly criticized the government often faced reprisal. 
+
+Although on a smaller scale than in previous years, interethnic conflict and cross-border raids by Darfur-based militias continued.
+
+There were reports that the government attempted to control criticism by monitoring meetings of the political opposition and that the government attempted to intimidate its critics.]]></TEXT>
+<TAGS>
+<AspectExpression id="AE0" spans="0~4" text="Rape"  />
+<AspectExpression id="AE1" spans="93~109" text="academic freedom"  />
+<AspectExpression id="AE2" spans="113~128" text="cultural events"  />
+<AspectExpression id="AE3" spans="399~408" text="criticism"  />
+<AspectExpression id="AE4" spans="423~431" text="meetings"  />
+<AspectExpression id="AE5" spans="497~507" text="intimidate"  />
+<JudgementExpression id="JE0" spans="36~49" text="was a problem"  />
+<JudgementExpression id="JE1" spans="52~65,77~92" text="There were no ... restrictions on"  />
+<JudgementExpression id="JE2" spans="378~398" text="attempted to control"  />
+<JudgementExpression id="JE3" spans="412~422" text="monitoring"  />
+<JudgementExpression id="JE4" spans="484~496" text="attempted to"  />
+<SourceOfJudgement id="SOJ0" spans="350~357" text="reports"  />
+<Perpetrator id="PER0" spans="66~76" text="government"  />
+<Perpetrator id="PER1" spans="363~377" text="the government"  />
+<Perpetrator id="PER3" spans="469~483" text="the government"  />
+<Victim id="VIC0" spans="19~34" text="female refugees"  />
+<Victim id="VIC1" spans="439~459" text="political opposition"  />
+<Victim id="VIC2" spans="508~519" text="its critics"  />
+<Negation id="NEG0" spans="63~65" text="no"  />
+<FromJudgementToAspectExpression id="LJA0" fromID="JE0" fromText="was a problem" toID="AE0" toText="Rape" />
+<FromJudgementToAspectExpression id="LJA1" fromID="JE1" fromText="There were no ... restrictions on" toID="AE1" toText="academic freedom" />
+<FromJudgementToAspectExpression id="LJA2" fromID="JE1" fromText="There were no ... restrictions on" toID="AE2" toText="cultural events" />
+<FromJudgementToAspectExpression id="LJA3" fromID="JE2" fromText="attempted to control" toID="AE3" toText="criticism" />
+<FromJudgementToAspectExpression id="LJA4" fromID="JE3" fromText="monitoring" toID="AE4" toText="meetings" />
+<FromJudgementToAspectExpression id="LJA5" fromID="JE4" fromText="attempted to" toID="AE5" toText="intimidate" />
+<FromSourceOfJudgementToJudgementExpression id="LJJ0" fromID="SOJ0" fromText="reports" toID="JE2" toText="attempted to control" />
+<FromPerpetratorToJudgementExpression id="LPJ0" fromID="PER0" fromText="government" toID="JE1" toText="There were no ... restrictions on" />
+<FromPerpetratorToJudgementExpression id="LPJ1" fromID="PER1" fromText="the government" toID="JE2" toText="attempted to control" />
+<FromPerpetratorToJudgementExpression id="LPJ2" fromID="PER1" fromText="the government" toID="JE3" toText="monitoring" />
+<FromPerpetratorToJudgementExpression id="LPJ3" fromID="PER3" fromText="the government" toID="JE4" toText="attempted to" />
+<FromJudgementExpressionToVictim id="LJV0" fromID="VIC0" fromText="female refugees" toID="JE0" toText="was a problem" />
+<FromJudgementExpressionToVictim id="LJV2" fromID="JE3" fromText="monitoring" toID="VIC1" toText="political opposition" />
+<FromJudgementExpressionToVictim id="LJV3" fromID="JE4" fromText="attempted to" toID="VIC2" toText="its critics" />
+<NegationOfJudgment id="NEGToJudge0" fromID="NEG0" fromText="no" toID="JE1" toText="There were no ... restrictions on" />
+</TAGS>
+</PULSARv2.2>

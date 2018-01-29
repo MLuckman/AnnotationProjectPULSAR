@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<PULSARv2.2>
+<TEXT><![CDATA[There was also serious conflict in the South.
+
+Armed conflict in the northern Saada region declined markedly after a February 11 ceasefire.
+
+There were reports that the government or its agents committed arbitrary or unlawful killings during the year.
+
+Members of the security forces continued to detain journalists for publishing articles the government deemed controversial
+
+There were no reports of politically motivated disappearances.
+
+They last did so in free and fair elections on May 6.
+
+The government limited press freedom, censoring and banning media outlets, which operated with restrictions.
+
+The constitution provides for freedom of speech and of the press "within the limits of the law"; however, the government did not respect these rights in practice.
+ 
+Prison and detention center conditions generally met international standards, and the government permitted visits by independent human rights observers.
+
+Prisoners and detainees had reasonable access to visitors and were permitted to observe and practice their respective religions.
+
+The constitution prohibits such practices; however, there were reports that individual police officers occasionally used excessive force.
+
+In the course of the year, security forces killed dozens of persons and injured hundreds of others in a series of increasingly violent demonstrations in Dhale, Lahj, Aden, Abyan, and Hadramout governorates.
+
+During the year the government launched mass preemptive arrest campaigns across the southern governorates and used excessive force to disperse demonstrations that sometimes involved tens of thousands of protesters. 
+
+]]></TEXT>
+<TAGS>
+<PhraseType id="PT0" spans="109~138" text="after a February 11 ceasefire" Content="CurrentEventOrFact" />
+<PhraseType id="PT1" spans="1560~1615" text="that sometimes involved tens of thousands of protesters" Content="CurrentEventOrFact" />
+<PhraseType id="PT2" spans="571~603" text="which operated with restrictions" Content="CurrentEventOrFact" />
+<PhraseType id="PT3" spans="1055~1096" text="The constitution prohibits such practices" Content="CurrentEventOrFact" />
+<PhraseType id="PT4" spans="316~375" text="for publishing articles the government deemed controversial" Content="CurrentEventOrFact" />
+<PhraseType id="PT5" spans="606~701" text="The constitution provides for freedom of speech and of the press &quot;within the limits of the law&quot;" Content="CurrentEventOrFact" />
+<AspectExpression id="AE0" spans="402~438" text="politically motivated disappearances"  />
+<AspectExpression id="AE1" spans="461~484" text="free and fair elections"  />
+<AspectExpression id="AE2" spans="636~653" text="freedom of speech"  />
+<AspectExpression id="AE3" spans="636~643,658~670" text="freedom ... of the press"  />
+<AspectExpression id="AE4" spans="771~809" text="Prison and detention center conditions"  />
+<AspectExpression id="AE5" spans="878~922" text="visits by independent human rights observers"  />
+<AspectExpression id="AE6" spans="964~982" text="access to visitors"  />
+<AspectExpression id="AE7" spans="1005~1052" text="observe and practice their respective religions"  />
+<AspectExpression id="AE8" spans="1176~1191" text="excessive force"  />
+<AspectExpression id="AE9" spans="1321~1343" text="violent demonstrations"  />
+<AspectExpression id="AE10" spans="1442~1474" text="mass preemptive arrest campaigns"  />
+<AspectExpression id="AE11" spans="47~61" text="Armed conflict"  />
+<AspectExpression id="AE12" spans="15~31" text="serious conflict"  />
+<AspectExpression id="AE13" spans="204~234" text="arbitrary or unlawful killings"  />
+<AspectExpression id="AE14" spans="1517~1559" text="excessive force to disperse demonstrations"  />
+<AspectExpression id="AE15" spans="519~532" text="press freedom"  />
+<AspectExpression id="AE16" spans="534~543,556~569" text="censoring ... media outlets"  />
+<AspectExpression id="AE17" spans="548~569" text="banning media outlets"  />
+<AspectExpression id="AE18" spans="297~315" text="detain journalists"  />
+<JudgementExpression id="JE0" spans="377~398" text="There were no reports"  />
+<JudgementExpression id="JE1" spans="441~457" text="They last did so"  />
+<JudgementExpression id="JE2" spans="810~847" text="generally met international standards"  />
+<JudgementExpression id="JE3" spans="868~877" text="permitted"  />
+<JudgementExpression id="JE4" spans="949~963" text="had reasonable"  />
+<JudgementExpression id="JE5" spans="987~1004" text="were permitted to"  />
+<JudgementExpression id="JE6" spans="1171~1175" text="used"  />
+<JudgementExpression id="JE7" spans="1293~1320" text="in a series of increasingly"  />
+<JudgementExpression id="JE8" spans="1433~1441" text="launched"  />
+<JudgementExpression id="JE9" spans="91~108" text="declined markedly"  />
+<JudgementExpression id="JE10" spans="0~9" text="There was"  />
+<JudgementExpression id="JE11" spans="194~203" text="committed"  />
+<JudgementExpression id="JE12" spans="284~296" text="continued to"  />
+<JudgementExpression id="JE13" spans="1512~1516" text="used"  />
+<JudgementExpression id="JE14" spans="727~767" text="did not respect these rights in practice"  />
+<JudgementExpression id="JE15" spans="511~518" text="limited"  />
+<JointAspectJudgementExpression id="JAJ0" spans="1237~1243" text="killed"  />
+<JointAspectJudgementExpression id="JAJ1" spans="1266~1273" text="injured"  />
+<SourceOfJudgement id="SOJ0" spans="388~398" text="no reports"  />
+<SourceOfJudgement id="SOJ1" spans="1118~1125" text="reports"  />
+<SourceOfJudgement id="SOJ2" spans="152~159" text="reports"  />
+<Perpetrator id="PER0" spans="496~510" text="The government"  />
+<Perpetrator id="PER1" spans="853~867" text="the government"  />
+<Perpetrator id="PER2" spans="925~948" text="Prisoners and detainees"  />
+<Perpetrator id="PER3" spans="1131~1170" text="individual police officers occasionally"  />
+<Perpetrator id="PER4" spans="1221~1236" text="security forces"  />
+<Perpetrator id="PER5" spans="1418~1432" text="the government"  />
+<Perpetrator id="PER6" spans="253~283" text="Members of the security forces"  />
+<Perpetrator id="PER7" spans="165~193" text="the government or its agents"  />
+<Perpetrator id="PER8" spans="712~726" text="the government"  />
+<Victim id="VIC1" spans="1244~1261" text="dozens of persons"  />
+<Victim id="VIC2" spans="1274~1292" text="hundreds of others"  />
+<Time id="TIM1" spans="485~493" text="on May 6"  />
+<Time id="TIM2" spans="1197~1219" text="the course of the year"  />
+<Time id="TIM3" spans="1402~1417" text="During the year"  />
+<Time id="TIM4" spans="117~128" text="February 11"  />
+<Time id="TIM5" spans="235~250" text="during the year"  />
+<Location id="LOC0" spans="1344~1399" text="in Dhale, Lahj, Aden, Abyan, and Hadramout governorates"  />
+<Location id="LOC1" spans="1475~1507" text="across the southern governorates"  />
+<Location id="LOC2" spans="65~90" text="the northern Saada region"  />
+<Location id="LOC3" spans="35~44" text="the South"  />
+<Negation id="NEG0" spans="388~390" text="no"  />
+<FromJudgementToAspectExpression id="LJA0" fromID="JE10" fromText="There was" toID="AE12" toText="serious conflict" />
+<FromJudgementToAspectExpression id="LJA1" fromID="JE9" fromText="declined markedly" toID="AE11" toText="Armed conflict" />
+<FromJudgementToAspectExpression id="LJA2" fromID="JE11" fromText="committed" toID="AE13" toText="arbitrary or unlawful killings" />
+<FromJudgementToAspectExpression id="LJA3" fromID="JE8" fromText="launched" toID="AE10" toText="mass preemptive arrest campaigns" />
+<FromJudgementToAspectExpression id="LJA4" fromID="JE13" fromText="used" toID="AE14" toText="excessive force to disperse demonstrations" />
+<FromJudgementToAspectExpression id="LJA5" fromID="JE7" fromText="in a series of increasingly" toID="AE9" toText="violent demonstrations" />
+<FromJudgementToAspectExpression id="LJA6" fromID="JE4" fromText="had reasonable" toID="AE6" toText="access to visitors" />
+<FromJudgementToAspectExpression id="LJA7" fromID="JE5" fromText="were permitted to" toID="AE7" toText="observe and practice their respective religions" />
+<FromJudgementToAspectExpression id="LJA8" fromID="JE2" fromText="generally met international standards" toID="AE4" toText="Prison and detention center conditions" />
+<FromJudgementToAspectExpression id="LJA9" fromID="JE3" fromText="permitted" toID="AE5" toText="visits by independent human rights observers" />
+<FromJudgementToAspectExpression id="LJA10" fromID="JE1" fromText="They last did so" toID="AE1" toText="free and fair elections" />
+<FromJudgementToAspectExpression id="LJA11" fromID="JE0" fromText="There were no reports" toID="AE0" toText="politically motivated disappearances" />
+<FromJudgementToAspectExpression id="LJA12" fromID="JE6" fromText="used" toID="AE8" toText="excessive force" />
+<FromJudgementToAspectExpression id="LJA13"  />
+<FromJudgementToAspectExpression id="LJA14" fromID="JE12" fromText="continued to" toID="AE18" toText="detain journalists" />
+<FromJudgementToAspectExpression id="LJA15" fromID="JE14" fromText="did not respect these rights in practice" toID="AE2" toText="freedom of speech" />
+<FromJudgementToAspectExpression id="LJA16" fromID="JE14" fromText="did not respect these rights in practice" toID="AE3" toText="freedom ... of the press" />
+<FromSourceOfJudgementToJudgementExpression id="LJJ0" fromID="SOJ2" fromText="reports" toID="JE11" toText="committed" />
+<FromSourceOfJudgementToJudgementExpression id="LJJ1" fromID="SOJ1" fromText="reports" toID="JE6" toText="used" />
+<FromPerpetratorToJudgementExpression id="LPJ0" fromID="PER7" fromText="the government or its agents" toID="JE11" toText="committed" />
+<FromPerpetratorToJudgementExpression id="LPJ1" fromID="PER5" fromText="the government" toID="JE8" toText="launched" />
+<FromPerpetratorToJudgementExpression id="LPJ2" fromID="PER4" fromText="security forces" toID="JE7" toText="in a series of increasingly" />
+<FromPerpetratorToJudgementExpression id="LPJ3" fromID="PER4" fromText="security forces" toID="JAJ0" toText="killed" />
+<FromPerpetratorToJudgementExpression id="LPJ4" fromID="PER4" fromText="security forces" toID="JAJ1" toText="injured" />
+<FromPerpetratorToJudgementExpression id="LPJ5" fromID="PER1" fromText="the government" toID="JE3" toText="permitted" />
+<FromPerpetratorToJudgementExpression id="LPJ6" fromID="PER3" fromText="individual police officers occasionally" toID="JE6" toText="used" />
+<FromPerpetratorToJudgementExpression id="LPJ7" fromID="PER6" fromText="Members of the security forces" toID="JE12" toText="continued to" />
+<FromPerpetratorToJudgementExpression id="LPJ8" fromID="PER8" fromText="the government" toID="JE14" toText="did not respect these rights in practice" />
+<FromJudgementExpressionToVictim id="LJV0" fromID="JAJ0" fromText="killed" toID="VIC1" toText="dozens of persons" />
+<FromJudgementExpressionToVictim id="LJV1" fromID="JAJ1" fromText="injured" toID="VIC2" toText="hundreds of others" />
+<FromJudgementExpressionToVictim id="LJV2" fromID="JE4" fromText="had reasonable" toID="PER2" toText="Prisoners and detainees" />
+<FromJudgementExpressionToVictim id="LJV3" fromID="JE5" fromText="were permitted to" toID="PER2" toText="Prisoners and detainees" />
+<FromTimeToEntity id="LTE0" fromID="TIM5" fromText="during the year" toID="AE13" toText="arbitrary or unlawful killings" />
+<FromTimeToEntity id="LTE1" fromID="TIM3" fromText="During the year" toID="AE10" toText="mass preemptive arrest campaigns" />
+<FromTimeToEntity id="LTE2" fromID="TIM2" fromText="the course of the year" toID="JAJ0" toText="killed" />
+<FromTimeToEntity id="LTE3" fromID="TIM2" fromText="the course of the year" toID="JAJ1" toText="injured" />
+<FromTimeToEntity id="LTE4" fromID="TIM2" fromText="the course of the year" toID="AE9" toText="violent demonstrations" />
+<FromTimeToEntity id="LTE5" fromID="TIM1" fromText="on May 6" toID="AE1" toText="free and fair elections" />
+<FromLocationToEntity id="LLE0" fromID="LOC3" fromText="the South" toID="AE12" toText="serious conflict" />
+<FromLocationToEntity id="LLE1" fromID="LOC2" fromText="the northern Saada region" toID="AE11" toText="Armed conflict" />
+<FromLocationToEntity id="LLE2" fromID="LOC1" fromText="across the southern governorates" toID="AE10" toText="mass preemptive arrest campaigns" />
+<FromLocationToEntity id="LLE3" fromID="LOC0" fromText="in Dhale, Lahj, Aden, Abyan, and Hadramout governorates" toID="AE9" toText="violent demonstrations" />
+<NegationOfJudgment id="NEGToJudge0" fromID="NEG0" fromText="no" toID="JE0" toText="There were no reports" />
+</TAGS>
+</PULSARv2.2>
