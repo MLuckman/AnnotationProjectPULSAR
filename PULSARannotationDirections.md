@@ -137,18 +137,16 @@ One could think of the `security forces` as the aspect, then the the judgment is
 
 - It is important to read for the violation and not just the subject and object of the sentence. For example, the sentence, `Individuals who publicly criticized the government often faced reprisal.` While `Individuals` is the subject. they are the victim of the underlying human rights violation, intimitation and punishing government criticism, being discussed. The aspect expression here is the `reprisal` for criticism, not the criticism itself. The phrase `who publicly criticized the government` describes the victim. The cleanest coding is `Individuals who publicly criticized the government` as the victim, `often faced` as the judgement and `reprisal` as the aspect. Since victims are connected to the violations through the judgments, the reason for the reprisal is not lost.
 
-- The term entity in the links, `FromLocationToEntity` and `FromTimeToEntity` refers to any tag, so location could refer to the source, perpetator, victim, etc.
-
-#### Questions for future
-
-- Some sentences have extensive details about an aspect, in particular. Should we allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity? It might be that time, location, victim and perpetrator handle this adequately.
-
-- We could add a new link type from an vague entity to another entity to resolve co-reference.
-
-- Add `148 children were kidnapped`, it should be coded as:
+- Numbers can be judgements. `148 children were kidnapped`, should be coded as:
 ``
 <JudgementExpression>148...were</JudgementExpression>
 <Victim>children</Victim>
 <AspectExpression>kidnapped</AspectExpression>
 ``
 with the two relevant links (FromJudgementToAspect and FromJudgementToVictim).
+
+- The term entity in the links, `FromLocationToEntity` and `FromTimeToEntity` refers to any tag, so location could refer to the source, perpetator, victim, etc.
+
+#### Questions for future
+
+- Some sentences have extensive details about an aspect, in particular. Should we allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity? It might be that time, location, victim and perpetrator handle this adequately.
