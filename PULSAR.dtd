@@ -1,10 +1,10 @@
 
 <!ENTITY name "PULSARv2.2">
-<!-- 
+<!--
     ~#DTD for Parsing Unstructured Language into Sentiment-Aspect ~Representations
     ~v2
     ~MPC
-    ~1/16/2018 
+    ~1/16/2018
     ~note: based on tutorial here, https://github.com/keighrim/mae-annotation/wiki/defining-dtd
 -->
 
@@ -90,3 +90,6 @@ this is not the perpetrator of violations, but the source of the information-->
 <!ELEMENT NegationOfJudgment EMPTY >
 <!ATTLIST NegationOfJudgment id ID prefix="NEGToJudge" #IMPLIED >
 
+<!-- #Link Co-reference tag for for vague entity references-->
+<!ELEMENT CoReferenceLink EMPTY >
+<!ATTLIST CoReferenceLink id ID prefix="CoRef" #IMPLIED >

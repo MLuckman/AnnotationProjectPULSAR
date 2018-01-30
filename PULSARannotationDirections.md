@@ -81,10 +81,13 @@ In addition, we want to identify connections between these tagged chunks of text
 5) between negation and the what is being negated, particularly the judgment
 6) between a location and what is located there
 7) between a time what took place at that time
+8) between an entity (eg an aspect or victim) and a vague reference to that entity (`these rights`, `them`)
 
 These are each types of relations are *links*.
 
 To code links, you first need to have the tags/entities coded. When you have the entities all coded for a sentence, and you are ready to create links, select **Mode**, and then **Switch to argument selection mode**, to create links you are selecting the arguments. You can also **Switch to argument selection mode" with the command-2 shortcut. In this mode, select anywhere in the tag for the first part of the link and click, then select anywhere in the tag for the second part of the link and click. You should see at least two discontinuous highlighted sections. Control-click on one of these, and select the appropriate link. A dialog will pop up that will let you choose the appropriate link type.
+
+Whenever possible use a CoReferenceLink for an aspect, victim or other entity. So that `While the constitution protected free speech, the government did not respect these rights.`, can be coded, in part, with the aspect `these rights` having the judgment `did not respect` and then `these rights` are linked with a CoReferenceLink to the previously mentioned aspect `free speech`.
 
 
 ##Saving your annotations
@@ -109,22 +112,22 @@ Civilian authorities did not maintain effective control of the security forces.
 ```
 One could think of the `security forces` as the aspect, then the the judgment is `did not maintain effective control of`.  Alternatively, one could think of `control of the security forces` as the aspect and then the judgment would be `did not maintain effective`. In this case, the second coding is slightly preferable, but only because `control of the security forces` is a relatively common phrase and security forces are groups that are more likely to be perpetrators. However, this phrase is not in the aspect list, making this more difficult. The `civilian government` is the perpetrator.
 
-- Related to the previous point, keep the phrase `rule of law`, `freedom of speech`, `freedom of expression`, `freedom of movement`, `freedom of assembly`, `freedom of association`, `freedom of press`, `extrajudicial killing`, etc. together. These are multi-word expressions that denote specific aspects, and are included in the example aspects list.
+- Related to the previous point, keep the phrase `rule of law`, `freedom of speech`, `freedom of expression`, `freedom of movement`, `freedom of assembly`, `freedom of association`, `freedom of press`, `extrajudicial killing`, etc. together. These are multi-word expressions that denote specific aspects, and are included in the example aspects list. See the github list of aspects for others.
 
 - When there are two prepositions, as in `obstruction of the work of nongovernmental organizations (NGOs)`, it is important to focus on the verb, here what is being obstructed is some part of an NGO, so `the work of nongovernmental organizations (NGOs)` is the aspect and the judgment is `obstruction of`. It helps that this is from the investigations and NGO section.
 
-- Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. Perpetrators are the cause of an effect.
+- Perpetrators in this coding scheme do not alway do negative things. You can perpetrate a protection or a peace accord. Perpetrators are the cause of an effect. It is important that the action is the human rights-related protection or violation, however.
 
-- Conversely, victims are the effected party. You can be a victim of amnesty, meaning you were granted amnesty.
+- Conversely, victims are the effected party. You can be a victim of amnesty, meaning you were granted amnesty. Again, it is important to think about what the underlying violation/protection was.
 
-- Include articles or adjectives in a tag if they would be left dangling ("<The executive>", "the legislature", "during 1998"). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in `severely limited`.
+- Include articles or adjectives in a tag if they would be left dangling (`The executive`, `the legislature`, `during 1998`). This is particularly important when an adjective intensifies or modifies other words within that expression, as in the last example in `severely limited`.
 
 - When events happen within the year of the report, try and code a relevant judgment if it is provided. The sentence:
 `In may, rebels crossed from Sudan into the east of the country and attacked` could be mistaken for an EventFact tag, but since it involves physical security, `attacked` is an JointAspectJudgement (and `attack` is specifically mentioned in the aspect list. In that case, the perpetrator is the rebels, so this is not an EventFact, as the sentence includes a judgment that something happened to influence physical security.
 
 - Judgments can involve more than one actor. The sentence `one of the main rebel factions signed a peace accord with the government` includes the judgment expression `signed` and the aspect expression `peace accord` since this is related to physical security. The perpetrators in this case are the rebel groups, since they signed, and the government. So there should be Perpetrator tags on those two actors and FromPerpetratortoJudgement links for each of rebel groups and government to the judgment expression `signed`.
 
-- Some aspects always imply a set or group of victims, like `child soldiers`, these victims do not need to be tagged separately. So in the phrase, `the use of child soldiers`, `child soldiers` is the aspect expression and `use of` is the judgment. Note that `child soldiers` is an aspect in the file.
+- Some aspects always imply a set or group of victims, like `child soldiers`, these victims do not need to be tagged separately. So in the phrase, `the use of child soldiers`, `child soldiers` is the aspect expression and `use of` is the judgment. Note that `child soldiers` is an aspect in the github list.
 
 - The phrasing of `reports` is tricky. A common phrase is `There were reports of` or `There were no reports of`. In these cases, `were reports` or `were no reports of`, should be coded as sources of information. The only exception to this is if these are the only judgment-like expressions in the sentence and the coding would not make sense without including `reports` as a judgment. This will be rare. More often, the negation in `no` is linked to the separate judgment expression. If `reports` needs to be included in the judgment, then it should also tagged as the source of the information. Care needs to be taken when linking the correct parts of these instances.
 
@@ -132,6 +135,9 @@ One could think of the `security forces` as the aspect, then the the judgment is
 
 - You should use discontinuous extents when necessary. For example, when there is one judgment that is split across the beginning and the end of a sentence. We want to code Yoda and the Statement Department consistently.
 
+- It is important to read for the violation and not just the subject and object of the sentence. For example, the sentence, `Individuals who publicly criticized the government often faced reprisal.` While `Individuals` is the subject. they are the victim of the underlying human rights violation, intimitation and punishing government criticism, being discussed. The aspect expression here is the `reprisal` for criticism, not the criticism itself. The phrase `who publicly criticized the government` describes the victim. The cleanest coding is `Individuals who publicly criticized the government` as the victim, `often faced` as the judgement and `reprisal` as the aspect. Since victims are connected to the violations through the judgments, the reason for the reprisal is not lost.
+
+- The term entity in the links, `FromLocationToEntity` and `FromTimeToEntity` refers to any tag, so location could refer to the source, perpetator, victim, etc.
 
 #### Questions for future
 
