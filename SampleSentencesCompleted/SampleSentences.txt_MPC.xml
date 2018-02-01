@@ -78,7 +78,6 @@ During the year the government launched mass preemptive arrest campaigns across 
 <JointAspectJudgementExpression id="JAJ0" spans="402~438" text="politically motivated disappearances"  />
 <SourceOfJudgement id="SOJ0" spans="152~159" text="reports"  />
 <SourceOfJudgement id="SOJ1" spans="388~398" text="no reports"  />
-<SourceOfJudgement id="SOJ2" spans="606~622" text="The constitution"  />
 <SourceOfJudgement id="SOJ3" spans="1055~1071" text="The constitution"  />
 <SourceOfJudgement id="SOJ4" spans="1118~1125" text="reports"  />
 <Perpetrator id="PER0" spans="165~193" text="the government or its agents"  />
@@ -90,16 +89,17 @@ During the year the government launched mass preemptive arrest campaigns across 
 <Perpetrator id="PER6" spans="1131~1157" text="individual police officers"  />
 <Perpetrator id="PER7" spans="1221~1236" text="security forces"  />
 <Perpetrator id="PER8" spans="1418~1432" text="the government"  />
+<Perpetrator id="PER9" spans="606~622" text="The constitution"  />
 <Victim id="VIC0" spans="304~315" text="journalists"  />
 <Victim id="VIC1" spans="925~948" text="Prisoners and detainees"  />
 <Victim id="VIC2" spans="1254~1261" text="persons"  />
 <Victim id="VIC3" spans="1286~1292" text="others"  />
 <Victim id="VIC4" spans="1605~1615" text="protesters"  />
-<Time id="TIM0" spans="117~128" text="February 11"  />
 <Time id="TIM1" spans="235~250" text="during the year"  />
 <Time id="TIM2" spans="485~493" text="on May 6"  />
 <Time id="TIM3" spans="1194~1219" text="In the course of the year"  />
 <Time id="TIM4" spans="1402~1417" text="During the year"  />
+<Time id="TIM5" spans="109~128" text="after a February 11"  />
 <Location id="LOC3" spans="1354~1358" text="Lahj"  />
 <Location id="LOC4" spans="1360~1364" text="Aden"  />
 <Location id="LOC5" spans="1366~1371" text="Abyan"  />
@@ -133,7 +133,6 @@ During the year the government launched mass preemptive arrest campaigns across 
 <FromJudgementToAspectExpression id="LJA21" fromID="JE23" fromText="used" toID="AE22" toText="excessive force" />
 <FromJudgementToAspectExpression id="LJA22" fromID="JE24" fromText="disperse ... that sometimes involved tens of thousands" toID="AE24" toText="demonstrations" />
 <FromSourceOfJudgementToJudgementExpression id="LJJ0" fromID="SOJ0" fromText="reports" toID="JE2" toText="committed" />
-<FromSourceOfJudgementToJudgementExpression id="LJJ1" fromID="SOJ2" fromText="The constitution" toID="JE11" toText="provides for ... &quot;within the limits of the law&quot;" />
 <FromSourceOfJudgementToJudgementExpression id="LJJ2" fromID="SOJ4" fromText="reports" toID="JE18" toText="occasionally used" />
 <FromPerpetratorToJudgementExpression id="LPJ0" fromID="PER0" fromText="the government or its agents" toID="JE2" toText="committed" />
 <FromPerpetratorToJudgementExpression id="LPJ1" fromID="PER1" fromText="Members of the security forces" toID="JE3" toText="continued to" />
@@ -154,7 +153,6 @@ During the year the government launched mass preemptive arrest campaigns across 
 <FromJudgementExpressionToVictim id="LJV3" fromID="JE19" fromText="dozens" toID="VIC2" toText="persons" />
 <FromJudgementExpressionToVictim id="LJV4" fromID="JE20" fromText="hundreds" toID="VIC3" toText="others" />
 <FromJudgementExpressionToVictim id="LJV5" fromID="JE24" fromText="disperse ... that sometimes involved tens of thousands" toID="VIC4" toText="protesters" />
-<FromTimeToEntity id="LTE0" fromID="TIM0" fromText="February 11" toID="PT0" toText="ceasefire" />
 <FromTimeToEntity id="LTE1" fromID="TIM1" fromText="during the year" toID="AE3" toText="arbitrary or unlawful killings" />
 <FromTimeToEntity id="LTE2" fromID="TIM2" fromText="on May 6" toID="AE7" toText="elections" />
 <FromTimeToEntity id="LTE3" fromID="TIM3" fromText="In the course of the year" toID="JE19" toText="dozens" />

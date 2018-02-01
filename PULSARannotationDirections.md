@@ -39,7 +39,7 @@ The goals are to mark up human rights reports so that we can identify what aspec
 
 *We also have a list of over 100 aspects in this [file](Aspect_Categories_with_Natural_Language_Interpretation.csv). When in doubt you can search this file to see if a phrase or something close comes up. If it does, then this should be an aspect.* As one example, `excessive force` is an aspect in this file.
 
-- *Judgment of protection or violation of an aspect of human rights*: These reports provide information about whether a country, in a given year, has protected or violated specific types of rights; and provides information and events related to those claims. A judgment tells us either directly or indirectly whether a right has been violated protected, or possibly that there is no information about this. One way to think about whether a phrase is an aspect of human rights or a judgment on an aspect is to think about whether you could attach multiple different judgments to that expression. For example, in the phrase: `Security forces committed widespread torture`, the aspect is torture, a form of physical integrity right. We could imagine another sentence that stated, `There were no reports that the Security forces used torture`, same aspect, different judgment. Judgments are often verbs, adverbs or adjectives.
+- *Judgment of protection or violation of an aspect of human rights*: These reports provide information about whether a country, in a given year, has protected or violated specific types of rights; and provides information and events related to those claims. A judgment tells us either directly or indirectly whether a right has been violated protected, or possibly that there is no information about this. One way to think about whether a phrase is an aspect of human rights or a judgment on an aspect is to think about whether you could attach multiple different judgments to that expression. For example, in the phrase: `Security forces committed widespread torture`, the aspect is torture, a form of physical integrity right. We could imagine another sentence that stated, `There were no reports that the Security forces used torture`, same aspect, different judgment. Judgments are often in verbs, adverbs or adjectives.
 
 - *Perpetrator*: These are the people or groups, often proper nouns, who have been the actors in the judged actions. Perpetrators usually are identified in these documents as having done negative things, but that is not always the case. A group can perpetrate a peace agreement, for example. Note that perpetrators can be `The Constitution` or `laws` in some instances; such as `The Constitution prohibited censorship`. In this example the `Constitution` is the perpetrator as it is acting; the aspect is `censorship`; and the judgment is `prohibited`.
 
@@ -129,7 +129,7 @@ One could think of the `security forces` as the aspect, then the the judgment is
 
 - Some aspects always imply a set or group of victims, like `child soldiers`, these victims do not need to be tagged separately. So in the phrase, `the use of child soldiers`, `child soldiers` is the aspect expression and `use of` is the judgment. Note that `child soldiers` is an aspect in the github list.
 
-- The phrasing of `reports` is tricky. A common phrase is `There were reports of` or `There were no reports of`. In these cases, `were reports` or `were no reports of`, should be coded as sources of information. The only exception to this is if these are the only judgment-like expressions in the sentence and the coding would not make sense without including `reports` as a judgment. This will be rare. More often, the negation in `no` is linked to the separate judgment expression. If `reports` needs to be included in the judgment, then it should also tagged as the source of the information. Care needs to be taken when linking the correct parts of these instances.
+- The phrasing of `reports` is tricky. A common phrase is `There were reports of` or `There were no reports of`. In these cases, `were reports` or `were no reports of`, should be coded as sources of information, `There were` and `There were no` are the judgment expressions. It is important to remember to take the negation in `no`. Care needs to be taken when linking the correct parts of these instances.
 
 - In most cases, when two actors are mentioned with an `and` then include them as separate entities, and with their links. If two actors are mentioned with an `or` then they should be joined as one extent, since we do not know which one should be used (`or` does not equal both).
 
@@ -148,5 +148,11 @@ with the two relevant links (FromJudgementToAspect and FromJudgementToVictim).
 - The term entity in the links, `FromLocationToEntity` and `FromTimeToEntity` refers to any tag, so location could refer to the source, perpetator, victim, etc.
 
 #### Questions for future
+
+- Should media and media outlets be victims or aspects in sentences such as `The government censored media outlets`.
+
+- Should the a constitution or law be a source of information/judgment or perpetrator in sentences like, `The constitution protected freed of expression`
+
+- How should we add to the aspect phrases?
 
 - Some sentences have extensive details about an aspect, in particular. Should we allow this be included in an aspect, or should be have to different aspect codings. One for the core abstract aspect and another for the details, and then a link between them? Is this just added complexity? It might be that time, location, victim and perpetrator handle this adequately.
